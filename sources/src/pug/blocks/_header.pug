@@ -1,2 +1,22 @@
 header.header
-    .container Header
+	.container
+		.header__inner
+			a(href="index.html").logo
+				img( src="images/logo.png" alt="logo")
+			.menu-block
+				a(href="#").menu-toggle
+					span.line.top
+					span.line.bot
+				.menu-list
+					ul.menu
+						li
+							a(href="#").active Бизнес
+						li
+							a(href="#") О нас
+						li
+							a(href="#") Цены
+						li
+							a(href="#" data-anchor='order') Оформить заказ
+		//header__inner
+	//container
+//header

@@ -1,0 +1,93 @@
+$fa-font-path:         "../fonts";
+
+// copy/paste fonts from 'libs' folder to fonts
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  font-display: $fa-font-display;
+  src: url('#{$fa-font-path}/fa-regular-400.eot');
+  src: url('#{$fa-font-path}/fa-regular-400.eot?#iefix') format('embedded-opentype'),
+  url('#{$fa-font-path}/fa-regular-400.woff2') format('woff2'),
+  url('#{$fa-font-path}/fa-regular-400.woff') format('woff'),
+  url('#{$fa-font-path}/fa-regular-400.ttf') format('truetype'),
+  url('#{$fa-font-path}/fa-regular-400.svg#fontawesome') format('svg');
+}
+
+.far {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400;
+}
+
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: $fa-font-display;
+  src: url('#{$fa-font-path}/fa-solid-900.eot');
+  src: url('#{$fa-font-path}/fa-solid-900.eot?#iefix') format('embedded-opentype'),
+  url('#{$fa-font-path}/fa-solid-900.woff2') format('woff2'),
+  url('#{$fa-font-path}/fa-solid-900.woff') format('woff'),
+  url('#{$fa-font-path}/fa-solid-900.ttf') format('truetype'),
+  url('#{$fa-font-path}/fa-solid-900.svg#fontawesome') format('svg');
+}
+
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+$font-path:  "../fonts";
+
+@font-face {
+  font-family: 'Lato';
+  src: url('#{$font-path}/Lato-Semibold.eot');
+  src: url('#{$font-path}/Lato-Semibold.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/Lato-Semibold.woff2') format('woff2'),
+  url('#{$font-path}/Lato-Semibold.woff') format('woff'),
+  url('#{$font-path}/Lato-Semibold.ttf') format('truetype'),
+  url('#{$font-path}/Lato-Semibold.svg#Lato-Semibold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('#{$font-path}/Lato-Bold.eot');
+  src: url('#{$font-path}/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/Lato-Bold.woff2') format('woff2'),
+  url('#{$font-path}/Lato-Bold.woff') format('woff'),
+  url('#{$font-path}/Lato-Bold.ttf') format('truetype'),
+  url('#{$font-path}/Lato-Bold.svg#Lato-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('#{$font-path}/Lato-Regular.eot');
+  src: url('#{$font-path}/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/Lato-Regular.woff2') format('woff2'),
+  url('#{$font-path}/Lato-Regular.woff') format('woff'),
+  url('#{$font-path}/Lato-Regular.ttf') format('truetype'),
+  url('#{$font-path}/Lato-Regular.svg#Lato-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('#{$font-path}/Lato-Heavy.eot');
+  src: url('#{$font-path}/Lato-Heavy.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/Lato-Heavy.woff2') format('woff2'),
+  url('#{$font-path}/Lato-Heavy.woff') format('woff'),
+  url('#{$font-path}/Lato-Heavy.ttf') format('truetype'),
+  url('#{$font-path}/Lato-Heavy.svg#Lato-Heavy') format('svg');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

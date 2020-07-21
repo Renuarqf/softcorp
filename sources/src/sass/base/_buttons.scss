@@ -1,12 +1,74 @@
 .btn {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   vertical-align: top;
   cursor: pointer;
   border: none;
   background-color: transparent;
   max-width:100%;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  letter-spacing: .025em;
+  min-width: 18rem;
+  border-radius: .4rem;
+  min-height: 4.2rem;
+  padding: .5rem 1.5rem;
+  transition: all $anim ease;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    border-width: 1px;
+    border-style: solid;
+    transition: all $anim ease;
+  }
+
+  &.btn-lg {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    min-height: 4.8rem;
+    font-weight: 600;
+  }
+
+  &.btn-wide {
+    width: 100%;
+  }
 }
 
 .btn-default {
+  background: $color-main;
+  color: $white;
 
+  &:before {
+    border-color: $white;
+  }
+
+  .desktop &:hover {
+    background: $color-main - #111;
+  }
+}
+
+.btn-simple {
+  background: $white;
+  color: $text-color;
+  &:before {
+    border-color: $text-color;
+  }
+  .desktop &:hover {
+    color: $color-main;
+
+    &:before {
+      border-color: $color-main;
+    }
+  }
 }

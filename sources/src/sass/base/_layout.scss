@@ -28,6 +28,23 @@ html {
     font-size:10px;
     line-height:1.2;
     overflow-y:scroll;
+
+    &.scroll-lock {
+        body {
+            overflow: hidden;
+        }
+    }
+
+    @include r(1270px) {
+        font-size: .8vw;
+    }
+    @include r($table-screen) {
+        font-size: 1.2vw;
+    }
+    @include r($mobile-screen) {
+        font-size: 2.2vw;
+    }
+
 }
 
 body {
@@ -37,15 +54,15 @@ body {
     background-color: $base-bg;
     color: $base-color;
     font-family: $font-default;
-    font-weight: 300;
-    font-size:1.4rem;
+    font-weight: normal;
+    font-size: 1.4rem;
 }
 
 .layout {
     position: relative;
     min-height: 100%;
     overflow: hidden;
-    
+
     display: flex;
     flex-direction: column;
 }
@@ -78,11 +95,16 @@ input {
 
 .container {
     width: 100%;
-    max-width: 1920px;
-    padding:0 9rem;
+    max-width: $container-w + 2*$cp;
+    padding:0 $cp;
     margin-left: auto;
     margin-right: auto;
     position:relative;
+
+    @include r($table-screen) {
+        max-width: 100%;
+        padding: 0 2rem;
+    }
 }
 
 .icon {
@@ -91,3 +113,66 @@ input {
     height:100%;
 }
 
+.blue {
+    color: $color-main;
+}
+
+.text-center {
+    text-align: center;
+    justify-content: center;
+}
+
+b, strong {
+    font-weight: bold;
+}
+.section-default {
+    display: block;
+    width: 100%;
+    position: relative;
+    padding: 10rem 0 14rem;
+
+    &.section-default-dark {
+        color: $white;
+        background: $dark;
+
+        .text-block {
+            color: $text-grey;
+        }
+    }
+    .section-default__bg-img {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        opacity: .1;
+    }
+}
+.section__title {
+    display: block;
+    font-size: 3.6rem;
+    line-height: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0 0 2.5rem;
+}
+
+
+.text-block {
+    display: block;
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    & > * {
+        margin: 0 0 1rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

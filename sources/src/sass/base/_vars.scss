@@ -8,11 +8,32 @@ $grid-width: 1170px;
 $grid-gutter: 30px;
 $grid-columns: 12;
 
-//colors
-$base-color: #333;
-$base-bg: #fff;
+$container-w: 117rem;
+$cp: 5rem;
 
-$font-default: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+//colors
+$color-main: #3e9cdc;
+$color-main-2: #43abf0;
+$text-color: #2a2b30;
+$text-grey:#bbbbbb;
+$dark: #272733;
+$base-color: $text-color;
+$base-bg: #fff;
+$header-bg: #10101d;
+$dark-blue: #286690;
+
+$footer-bg: #3d4050;
+$footer-link-main: #fefefe;
+$footer-link-alter: #c3c3c3;
+
+$white: #fff;
+
+$input-bg: #dfdfe1;
+$input-file-bg: #f4f4f5;
+
+
+$ff-lato: 'Lato';
+$font-default: $ff-lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
 
 // custom grid
