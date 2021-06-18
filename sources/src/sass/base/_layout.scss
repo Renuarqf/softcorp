@@ -176,3 +176,22 @@ b, strong {
         }
     }
 }
+
+button, input, a{
+    -webkit-tap-highlight-color: transparent;
+}
+
+.text-active{
+    color: $color-main;
+}
+.text-medium{
+    font-weight: 700;
+}
+
+.text-link{
+    transition: all 0.2s linear;
+
+    &:hover{
+        color: $color-main;
+    }
+}

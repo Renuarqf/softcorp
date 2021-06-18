@@ -2,21 +2,60 @@ header.header
 	.container
 		.header__inner
 			a(href="index.html").logo
-				img( src="images/logo.png" alt="logo")
+				+setSvg({name: 'logo'})
 			.menu-block
-				a(href="#").menu-toggle
+				a().menu-toggle
 					span.line.top
+					span.line.mid
 					span.line.bot
 				.menu-list
 					ul.menu
 						li
-							a(href="#").active Бизнес
+							a(href="#").active О нас
 						li
-							a(href="#") О нас
+							a(href="#") Лидогенерация
 						li
-							a(href="#") Цены
+							a(href="#") Сайты
 						li
-							a(href="#" data-anchor='order') Оформить заказ
+							a(href="#") Переводы
+					.call-block.active-mobile
+						// Заказать звонок
+						//__________
+						.call-block__link-wrapper
+							.call-block__link
+								a(href='#').link Заказать звонок
+						//__________
+						// Номер телефона
+						//__________
+						.call-block__tel-wrapper
+							.call-block__tel
+								a(href='tel: +0634372457').tel (063) 437 24 57
+						//__________
+			.header__right
+				.langs-block
+					.langs-block__active
+						span RU
+						+setSvg({name: 'arrow-down'})
+					.langs-block__list-wrapper.lang-toggle
+						ul.langs-block__list
+							li
+								a RU
+							li
+								a EN
+				.call-block.remove-mobile
+					// Заказать звонок
+					//__________
+					.call-block__link-wrapper
+						.call-block__link
+							a(href='#').link Заказать звонок
+					//__________
+					// Номер телефона
+					//__________
+					.call-block__tel-wrapper
+						.call-block__tel
+							a(href='tel: +0634372457').tel (063) 437 24 57
+					//__________
+
 		//header__inner
 	//container
 //header

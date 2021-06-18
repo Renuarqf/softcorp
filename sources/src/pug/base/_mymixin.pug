@@ -1,0 +1,50 @@
+//Формы
+mixin input-tel(object)
+    input.input-text(type='text' name='tel' required=object.required ? true: false placeholder = object.placeholder ? object.placeholder: 'Ваш телефон')
+
+mixin input-name(object)
+    input.input-text(type='text' name='name' required=object.required ? true: false placeholder = object.placeholder ? object.placeholder: 'Ваше имя')
+
+mixin input-email(object)
+    input.input-text(type='text' name='email' required=object.required ? true: false placeholder = object.placeholder ? object.placeholder: 'Ваша почта')
+mixin input-area(object)
+    textarea.input-text(placeholder="Ваш комментарий..")
+mixin input-submit(object)
+    input.input-submit(type='submit' class=object.style value = object.value ? object.value: 'Отправить')
+
+
+//Графика
+mixin setImg(object)
+    picture
+        source(srcset=object.webp media="(min-width: 767px)" alt=object.alt type='image/webp')
+        source(srcset=object.mWebp media="(min-width: 0) and (max-width: 767px)" alt=object.alt type='image/webp')
+        img(src=object.img srcset=mImg + ' 767w' alt=object.alt)
+
+mixin setSvg(object)
+    svg.icon
+        use(xlink:href='images/skipped-optim.svg#' + object.name)
+
+//Текстовка
+mixin sectionTitle(object)
+    h2.section-title !{object.text}
+
+mixin sectionSubTitle(object)
+    span.section-subtitle !{object.text}
+
+mixin formTitle(object)
+    h6.form-title !{object.text}
+mixin formText(object)
+    p.form-text !{object.text}
+mixin formPolice(object)
+    p.form-police !{object.text}
+
+
+
+mixin servicesItems(object)
+    .services-list__item-wrapper
+        a(href=object.link).services-list__item
+            .services-list__item-icon
+                +setSvg({name: object.icon})
+            .services-list__item-data
+                .services-list__item-title !{object.title}
+                .services-list__item-text !{object.text}

@@ -1,95 +1,68 @@
 extends base/_layout
 block head
-    title Main
+    title Главная
 block page
-    section.section-main
+    section.section-main(style="background-image:url(images/content/main-section/bg-pc.jpg)")
+        .section-main__wrapper
+            .container
+                .section-main__inner
+                    .section-main__data
+                        .main-block
+                            .main-block__content
+                                h1.main-block__title Вы экспортер? Вы МСП?
+                                p.main-block__text Оставьте заявку и получите бесплатные услуги от команды LILWID
+                    .section-main__form
+                        form.section-main__form-inner
+                            .section-main__form-header
+                                .section-main__form-title
+                                    +formTitle({text: 'Оставьте заявку'})
+                                .section-main__form-text
+                                    +formText({text: 'и получите <span class="text-active">бесплатные услуги</span> от команды <span class="text-medium">Likwid</span>'})
+                            .section-main__form-body
+                                .section-main__form-row
+                                    .section-main__form-col
+                                        +input-name({placeholder: 'Как вас зовут?'})
+                                    .section-main__form-col
+                                        +input-email({placeholder: 'Ваш Email'})
+                                .section-main__form-row
+                                    +input-area()
+                            .section-main__form-footer
+                                .section-main__form-submit
+                                    +input-submit({value: 'Оставить заявку'})
+                                .section-main__form-police
+                                    +formPolice({text: '*Нажимая на кнопку \"Оставить заявку\", <br> вы соглашаетесь с <a href="police.html" class="text-link">политикой конфиденциальности</a>'})
+    section.section-getFree
         .container
-            .main-block
-                .main-block__bg(style="background-image:url(images/content/main-bg.jpg)")
-                .main-block__content
-                    .main-block__title
-                        | <span class="blue">Lorem ipsum</span> dolor sit amet consectetur <span class="blue">adipiscing</span>
-                    .main-block__text
-                        p
-                            strong At vero eos et accusamus et iusto odio dignissimos ducimus!
-                        p - Totam rem aperiam eaque ipsa
-                        p - Sit voluptatem accusantium doloremque laudantium
-                        p - Sed ut perspiciatis, unde omnis iste natus error
-                    ul.main-block__controls
-                        li
-                            a(href="#").btn.btn-default
-                                span Заказать
-                        li
-                            a(href="#").btn.btn-simple
-                                span Подробнее
-            //main-block
-        //container
-    //section-default
-    section(data-anchor='order').section-default.section-default-dark
-        .section-default__bg-img(style="background-image:url(images/content/map-bg.png)")
-        .container
-            .section__title.text-center
-                | Оформление  <span class="blue">Заказа</span>
-            .text-block.text-center
-                p Перед заполнением формы ознакомьтесь с нашей схемой работы!
-            mixin graphOne(obj)
-                .graph-one
-                    .graph__img
-                        .graph__icon(class=obj.icon)
-                    .graph__name=obj.name
-            .step-graph
-                +graphOne({name:'Lorem ipsum dolor sit amet', icon: 'fas fa-search'})
-                .graph-separator
-                +graphOne({name:'Сonsecteturadipiscing elit', icon: 'fas fa-percent'})
-                .graph-separator
-                +graphOne({name:'Sed do eiusmod tempor', icon: 'far fa-file'})
-                .graph-separator
-                +graphOne({name:'Esse cillum dolore eu fugiat', icon: 'far fa-envelope'})
-                .graph-separator
-                +graphOne({name:'Excepteur sint occaecat cupidatat non proident', icon: 'far fa-money-bill-alt'})
-            form.form-block
-                .form__line
-                    .form__cell
-                        +selectForm({
-                            placeholder: 'Выберите тип системы',
-                        })
-                    .form__cell
-                        +inputForm({
-                            placeholder: 'Ваш e-mail',
-                            type: 'email'
-                        })
-                    .form__cell
-                        +inputForm({
-                            placeholder: 'Ваше имя',
-                            type: 'text'
-                        })
-                .form__line
-                    .form__cell.form__cell-2x
-                        .range-slider
-                            .range-slider__name Sed ut perspiciatis, unde omnis iste natus
-                            input(type="range"
-                                min="1"
-                                max="100"
-                                step="1"
-                                value="50"
-                                data-orientation="horizontal"
-                            )
-                    .form__cell
-                        .attach-file
-                            label.file-label
-                                input(type='file').input-file
-                                span.input-file__button__wrap
-                                    span.input-file__button
-                                        +svgIcon('#document-icon')
-                                        span.name Прикрепить файл
-                            .attach-file__uploaded__wrap
-                                .attach-file__uploaded
-                                    .uploaded__name
-                                    a(href="#remove-file").uploaded__remove
-                                        +svgIcon('#close-icon')
-                .form__bottom
-                    .form__cell
-                        button(type="submit").btn.btn-default.btn-lg.btn-wide
-                            span Отправить
-        //container
-    //section-default
+            .section-getFree__inner
+                //left
+                .section-getFree__items
+                    .services-list__wrapper
+                        ul.services-list
+                            +servicesItems({
+                                title: 'Поиск клиентов на международном рынке',
+                                icon: 'services-search',
+                                link: 'search_clients.html',
+                                text: 'и получите бесплатные услуги от команды Likwid'
+                            })
+                            +servicesItems({
+                                title: 'Создание маркетинговых материалов',
+                                icon: 'services-create',
+                                link: 'search_clients.html',
+                                text: 'и получите бесплатные услуги от команды Likwid'
+                            })
+                            +servicesItems({
+                                title: 'Создание сайта',
+                                icon: 'services-site',
+                                link: 'search_clients.html',
+                                text: 'и получите бесплатные услуги от команды Likwid'
+                            })
+                            +servicesItems({
+                                title: 'Перевод на новые языки',
+                                icon: 'services-translate',
+                                link: 'search_clients.html',
+                                text: 'и получите бесплатные услуги от команды Likwid'
+                            })
+                //right
+                .section-getFree__right
+                    h2.section-getFree__title
+                    img(src='images/content/section-getFree/pc-')

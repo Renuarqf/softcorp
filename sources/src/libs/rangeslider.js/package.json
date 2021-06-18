@@ -1,28 +1,32 @@
 {
-  "_from": "rangeslider.js",
+  "_args": [
+    [
+      "rangeslider.js@2.3.3",
+      "/home/ruzen/WebstormProjects/test/orhi/sources"
+    ]
+  ],
+  "_from": "rangeslider.js@2.3.3",
   "_id": "rangeslider.js@2.3.3",
   "_inBundle": false,
   "_integrity": "sha512-FNpe62R6DfGRPAB5rpDKkZtaMDZ0CFqoLprXtNbYiincgld0bHm/Gs/7iuiSD/naM5C3sz+icY3jghKDcGR17g==",
   "_location": "/rangeslider.js",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
+    "type": "version",
     "registry": true,
-    "raw": "rangeslider.js",
+    "raw": "rangeslider.js@2.3.3",
     "name": "rangeslider.js",
     "escapedName": "rangeslider.js",
-    "rawSpec": "",
+    "rawSpec": "2.3.3",
     "saveSpec": null,
-    "fetchSpec": "latest"
+    "fetchSpec": "2.3.3"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/rangeslider.js/-/rangeslider.js-2.3.3.tgz",
-  "_shasum": "281953334f94c85823713c00f7e816c770ed6cbc",
-  "_spec": "rangeslider.js",
-  "_where": "/Users/renuar/work/softcorp/sources",
+  "_spec": "2.3.3",
+  "_where": "/home/ruzen/WebstormProjects/test/orhi/sources",
   "author": {
     "name": "André Ruffert",
     "url": "http://andreruffert.com"
@@ -30,9 +34,7 @@
   "bugs": {
     "url": "https://github.com/andreruffert/rangeslider.js/issues"
   },
-  "bundleDependencies": false,
   "codename": "Navy Blue",
-  "deprecated": false,
   "description": "Simple, small and fast jQuery polyfill for the HTML5 <input type=\"range\"> slider element",
   "devDependencies": {
     "crayola": "0.0.1",

@@ -1,77 +1,113 @@
 .header {
   display: block;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  //height: 10rem;
-  padding: 4rem 0;
+  padding: 4em 0;
   z-index: 500;
   transition: padding $anim ease;
 
-  &.fixed-mode {
-    @include rmin($table-screen) {
-      padding: 2rem 0;
+  @media screen and (max-width: $desctop-xs) {
+    padding: 3rem 0;
+  }
+
+  @media screen and (max-width: $mobile-screen) {
+    padding: 2rem 0;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media screen and (max-width: $desctop-xs) {
+      order: 2;
+      margin-right: 9rem;
+    }
+    
+    @media screen and (max-width: $mobile-screen) {
+      margin-right: 7rem;
     }
   }
 
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: $header-bg;
-    opacity: .9;
-  }
+  //&:before {
+  //  content: '';
+  //  display: block;
+  //  position: absolute;
+  //  top: 0;
+  //  left: 0;
+  //  right: 0;
+  //  bottom: 0;
+  //  background: $header-bg;
+  //  opacity: .9;
+  //}
+
   .header__inner {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     position: relative;
     width: 100%;
 
-  }
-  @include r($table-screen) {
-    padding: 0;
-    .header__inner {
-      padding: 2rem 0;
+    @media screen and (max-width: $desctop-xs) {
+      flex-wrap: wrap;
     }
   }
 }
 
 .logo {
   display: block;
-  width: auto;
-  height: 2rem;
+  width: 17.4rem;
+  height: 4.4rem;
 
-  img {
-    display: block;
-    width: auto;
+  &:hover .icon {
+    fill: #F28B41;
+  }
+
+  .icon {
+    width: 100%;
     height: 100%;
+
+    fill: white;
+
+    transition: all 0.15s linear;
   }
-  @include r($table-screen) {
-    height: 1.5rem;
-  }
+
 }
 
 .menu-block {
   display: block;
-  margin-left: auto;
-  height: 2rem;
+  margin: auto;
+
+  transform: translateX(-11rem);
+
+  @media screen and (max-width: $desctop-xs) {
+    order: 3;
+
+    width: 100%;
+    max-width: none;
+
+    transform: translateX(0);
+  }
 }
 
+
 .menu-toggle {
-  display: block;
+  display: none;
   position: absolute;
   width: 5rem;
   height: 5rem;
-  top: 50%;
+  top: -3rem;
   margin-top: -2.5rem;
   right: -.5rem;
+
+  -webkit-tap-highlight-color: transparent;
+
+  @media screen and (max-width: $mobile-screen) {
+    top: -2.5rem;
+  }
 
   .line {
     display: block;
@@ -86,56 +122,104 @@
     border-radius: .4rem;
 
     &.top {
-      margin-top: -.6rem;
+      margin-top: -1rem;
     }
+
+    &.mid {
+
+      opacity: 1;
+      transform: translateX(0);
+    }
+
     &.bot {
-      margin-top: .5rem;
+      margin-top: 1rem;
     }
   }
+
   &.active {
     .line {
       &.top {
         margin-top: -.2rem;
         transform: rotate(-135deg);
       }
+
+      &.mid {
+        transform: translateX(50%);
+        opacity: 0;
+      }
+
       &.bot {
         margin-top: -.2rem;
         transform: rotate(135deg);
       }
     }
   }
-  @include rmin($table-screen) {
-    display: none;
+
+  @media screen and (max-width: $desctop-xs) {
+    display: block;
   }
 }
 
 .menu-list {
   display: block;
-  @include rmin($table-screen) {
-    display: block !important;
-  }
-  @include r($table-screen) {
+  @media screen and (max-width: $desctop-xs) {
     display: none;
     position: absolute;
     top: 100%;
     left: 50%;
     width: 100vw;
-    //height: calc(100vh - 3.5rem);
     margin-top: 0;
     margin-left: -50vw;
+    padding: 0 5rem;
+
+    .call-block{
+      position: relative;
+      z-index: 10;
+
+      padding-bottom: 2rem;
+
+      margin-left: 0;
+
+      &__link-wrapper{
+        margin-left: 0;
+
+        margin-bottom: 2rem;
+      }
+
+      &__link{
+        font-size: 2.2rem;
+      }
+    }
+
 
 
     &:before {
       content: '';
       display: block;
       position: absolute;
-      top: 0;
+      top: 1.1rem;
       left: 0;
       right: 0;
       bottom: 0;
       background: $header-bg;
       opacity: .9;
     }
+  }
+
+  @media screen and (max-width: $mobile-screen) {
+    padding: 0 2rem;
+  }
+
+  @media screen and (max-width: $table-screen) {
+    &:before {
+      top: 1rem;
+    }
+  }
+
+  @media screen and (max-width: $mobile-screen) {
+      &:before{
+        top: 2rem;
+      }
   }
 }
 
@@ -151,43 +235,233 @@
   & > li {
     display: block;
     list-style: none;
-    margin-left: 5.7rem;
+    margin-left: 3.1rem;
 
     &:first-child {
       margin-left: 0;
     }
   }
+
   a {
     display: block;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     line-height: 1.8rem;
     color: $white;
-    text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 400;
     transition: color $anim ease;
+
     &.active {
-      color: $color-main-2;
+      color: $color-main;
     }
 
     .desktop &:hover {
       color: $color-main;
+      text-decoration: underline;
     }
   }
-  @include r($table-screen) {
+
+  @media screen and (max-width: $desctop-xs) {
     display: block;
-    padding: 2rem 0;
+    padding: 3rem 0 2rem;
 
     & > li {
       display: block;
       width: 100%;
       margin: 0;
-      padding: 1rem 2rem;
+      padding: 1rem 0;
     }
     a {
       display: block;
       text-align: center;
       font-size: 1.5rem;
       line-height: 2.2rem;
+
+      @media screen and (max-width: $desctop-xs) {
+        text-align: left;
+        font-size: 2.6rem;
+      }
+    }
+  }
+}
+
+//langs__block
+
+.langs-block {
+  width: 5.7rem;
+
+  -webkit-tap-highlight-color: transparent;
+
+  @media screen and (max-width: $mobile-screen) {
+    width: 7.7rem;
+  }
+
+  &__active {
+    color: #979797;
+
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 0.5rem 0 0.5rem 0.8rem;
+
+    cursor: pointer;
+
+    transition: all 0.05s linear;
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 2rem;
+    }
+
+    &.active {
+      color: $color-main;
+
+      .icon {
+        stroke: $color-main;
+
+        transition: all 0.05s linear;
+      }
+    }
+
+    .icon {
+      width: 1.2rem;
+      height: 2rem;
+
+      margin-left: 0.8rem;
+
+      stroke: #979797;
+
+      @media screen and (max-width: $mobile-screen) {
+        width: 2rem;
+        height: 2.5rem;
+      }
+    }
+  }
+
+  &__list-wrapper {
+    position: relative;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.2s linear;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    z-index: 10;
+
+    width: 100%;
+
+    & > li {
+      list-style-type: none;
+
+      background: #2d2d2d;
+
+      transition: all 0.05s linear;
+
+      border-radius: 0.5rem;
+
+      width: 100%;
+
+      color: #979797;
+
+      & > a {
+        display: block;
+
+        width: 100%;
+
+        padding: 0.5rem 0 0.5rem 0.8rem;
+
+        transition: all 0.05s linear;
+
+        font-size: 1.6rem;
+
+        @media screen and (max-width: $mobile-screen) {
+          font-size: 2rem;
+        }
+      }
+
+      &:hover {
+        background-color: $color-main;
+        color: black;
+      }
+    }
+  }
+}
+
+//call-block
+
+.call-block {
+  margin-left: 5rem;
+
+  &.remove-mobile {
+    @media screen and (max-width: $mobile-screen) {
+      display: none;
+    }
+  }
+
+  &.active-mobile{
+    display: none;
+
+    @media screen and (max-width: $mobile-screen) {
+      display: block;
+    }
+  }
+
+  &__link {
+    color: $color-main;
+
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    text-align: right;
+    transition: all 0.05s linear;
+
+    &:hover {
+      color: #B36730;
+    }
+
+    &-wrapper {
+      display: block;
+
+      border-bottom: 2px dotted $color-main;
+
+      padding-bottom: 0;
+
+      margin-bottom: 0.4rem;
+
+      width: max-content;
+
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  &__tel {
+    font-size: 2.4rem;
+    font-weight: 500;
+
+    color: #979797;
+
+    transition: all 0.05s linear;
+
+    &:hover {
+      color: #dbdbdb;
     }
   }
 }
