@@ -1,7 +1,10 @@
-<!DOCTYPE html>
+
+<!--Формы-->
+<!--Графика-->
+<!--Текстовка--><!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Main</title>
+    <title>Главная</title>
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,8 +23,8 @@
     <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="css/main.min.css">
-    <!--link(href='https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap', rel='stylesheet')-->
+    <link rel="stylesheet" href="css/main.min.css"><link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="preload">
   </head>
   <body>
     <div class="svg-store">
@@ -70,15 +73,61 @@
     <div class="layout">
       <header class="header">
         <div class="container">
-          <div class="header__inner"><a class="logo" href="index.html"><img src="images/logo.png" alt="logo"></a>
-            <div class="menu-block"><a class="menu-toggle" href="#"><span class="line top"></span><span class="line bot"></span></a>
+          <div class="header__inner"><a class="logo" href="index.html">
+              <svg class="icon">
+                <use xlink:href="images/skipped-optim.svg#logo"></use>
+              </svg></a>
+            <div class="menu-block"><a class="menu-toggle"><span class="line top"></span><span class="line mid"></span><span class="line bot"></span></a>
               <div class="menu-list">
                 <ul class="menu">
-                  <li><a class="active" href="#">Бизнес</a></li>
-                  <li><a href="#">О нас</a></li>
-                  <li><a href="#">Цены</a></li>
-                  <li><a href="#" data-anchor="order">Оформить заказ</a></li>
+                  <li><a class="active" href="#">О нас</a></li>
+                  <li><a href="#">Лидогенерация</a></li>
+                  <li><a href="#">Сайты</a></li>
+                  <li><a href="#">Переводы</a></li>
                 </ul>
+                <div class="call-block active-mobile">
+                  <!-- Заказать звонок-->
+                  <!--__________-->
+                  <div class="call-block__link-wrapper">
+                    <div class="call-block__link"><a class="link" href="#">Заказать звонок</a></div>
+                  </div>
+                  <!--__________-->
+                  <!-- Номер телефона-->
+                  <!--__________-->
+                  <div class="call-block__tel-wrapper">
+                    <div class="call-block__tel"><a class="tel" href="tel: +0634372457">(063) 437 24 57</a></div>
+                  </div>
+                  <!--__________-->
+                </div>
+              </div>
+            </div>
+            <div class="header__right">
+              <div class="langs-block">
+                <div class="langs-block__active"><span>RU</span>
+                  <svg class="icon">
+                    <use xlink:href="images/skipped-optim.svg#arrow-down"></use>
+                  </svg>
+                </div>
+                <div class="langs-block__list-wrapper lang-toggle">
+                  <ul class="langs-block__list">
+                    <li><a>RU</a></li>
+                    <li><a>EN</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="call-block remove-mobile">
+                <!-- Заказать звонок-->
+                <!--__________-->
+                <div class="call-block__link-wrapper">
+                  <div class="call-block__link"><a class="link" href="#">Заказать звонок</a></div>
+                </div>
+                <!--__________-->
+                <!-- Номер телефона-->
+                <!--__________-->
+                <div class="call-block__tel-wrapper">
+                  <div class="call-block__tel"><a class="tel" href="tel: +0634372457">(063) 437 24 57</a></div>
+                </div>
+                <!--__________-->
               </div>
             </div>
           </div>
@@ -88,146 +137,112 @@
       </header>
       <!--header-->
       <main class="main">
-        <section class="section-main">
-          <div class="container">
-            <div class="main-block">
-              <div class="main-block__bg" style="background-image:url(images/content/main-bg.jpg)"></div>
-              <div class="main-block__content">
-                <div class="main-block__title"><span class="blue">Lorem ipsum</span> dolor sit amet consectetur <span class="blue">adipiscing</span></div>
-                <div class="main-block__text">
-                  <p><strong>At vero eos et accusamus et iusto odio dignissimos ducimus!</strong></p>
-                  <p>- Totam rem aperiam eaque ipsa</p>
-                  <p>- Sit voluptatem accusantium doloremque laudantium</p>
-                  <p>- Sed ut perspiciatis, unde omnis iste natus error</p>
+        <section class="section-main" style="background-image:url(images/content/main-section/bg-pc.jpg)">
+          <div class="section-main__wrapper">
+            <div class="container">
+              <div class="section-main__inner">
+                <div class="section-main__data">
+                  <div class="main-block">
+                    <div class="main-block__content">
+                      <h1 class="main-block__title">Вы экспортер? Вы МСП?</h1>
+                      <p class="main-block__text">Оставьте заявку и получите бесплатные услуги от команды LILWID</p>
+                    </div>
+                  </div>
                 </div>
-                <ul class="main-block__controls">
-                  <li><a class="btn btn-default" href="#"><span>Заказать</span></a></li>
-                  <li><a class="btn btn-simple" href="#"><span>Подробнее</span></a></li>
-                </ul>
+                <div class="section-main__form">
+                  <form class="section-main__form-inner">
+                    <div class="section-main__form-header">
+                      <div class="section-main__form-title">
+                        <h6 class="form-title">Оставьте заявку</h6>
+                      </div>
+                      <div class="section-main__form-text">
+                        <p class="form-text">и получите <span class="text-active">бесплатные услуги</span> от команды <span class="text-medium">Likwid</span></p>
+                      </div>
+                    </div>
+                    <div class="section-main__form-body">
+                      <div class="section-main__form-row">
+                        <div class="section-main__form-col">
+                          <input class="input-text" type="text" name="name" placeholder="Как вас зовут?"/>
+                        </div>
+                        <div class="section-main__form-col">
+                          <input class="input-text" type="text" name="email" placeholder="Ваш Email"/>
+                        </div>
+                      </div>
+                      <div class="section-main__form-row">
+                        <textarea class="input-text" placeholder="Ваш комментарий.."></textarea>
+                      </div>
+                    </div>
+                    <div class="section-main__form-footer">
+                      <div class="section-main__form-submit">
+                        <input class="input-submit" type="submit" value="Оставить заявку"/>
+                      </div>
+                      <div class="section-main__form-police">
+                        <p class="form-police">*Нажимая на кнопку "Оставить заявку", <br> вы соглашаетесь с <a href="police.html" class="text-link">политикой конфиденциальности</a></p>
+                      </div>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
-            <!--main-block-->
           </div>
-          <!--container-->
         </section>
-        <!--section-default-->
-        <section class="section-default section-default-dark" data-anchor="order">
-          <div class="section-default__bg-img" style="background-image:url(images/content/map-bg.png)"></div>
+        <section class="section-getFree">
           <div class="container">
-            <div class="section__title text-center">Оформление  <span class="blue">Заказа</span></div>
-            <div class="text-block text-center">
-              <p>Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
-            </div>
-            <div class="step-graph">
-                          <div class="graph-one">
-                            <div class="graph__img">
-                              <div class="graph__icon fas fa-search"></div>
-                            </div>
-                            <div class="graph__name">Lorem ipsum dolor sit amet</div>
-                          </div>
-              <div class="graph-separator"></div>
-                          <div class="graph-one">
-                            <div class="graph__img">
-                              <div class="graph__icon fas fa-percent"></div>
-                            </div>
-                            <div class="graph__name">Сonsecteturadipiscing elit</div>
-                          </div>
-              <div class="graph-separator"></div>
-                          <div class="graph-one">
-                            <div class="graph__img">
-                              <div class="graph__icon far fa-file"></div>
-                            </div>
-                            <div class="graph__name">Sed do eiusmod tempor</div>
-                          </div>
-              <div class="graph-separator"></div>
-                          <div class="graph-one">
-                            <div class="graph__img">
-                              <div class="graph__icon far fa-envelope"></div>
-                            </div>
-                            <div class="graph__name">Esse cillum dolore eu fugiat</div>
-                          </div>
-              <div class="graph-separator"></div>
-                          <div class="graph-one">
-                            <div class="graph__img">
-                              <div class="graph__icon far fa-money-bill-alt"></div>
-                            </div>
-                            <div class="graph__name">Excepteur sint occaecat cupidatat non proident</div>
-                          </div>
-            </div>
-            <form class="form-block">
-              <div class="form__line">
-                <div class="form__cell">
-                  <div class="select">
-                    <input class="select__input" type="hidden"/>
-                    <div class="select__custom">
-                      <div class="select__name">Выберите тип системы</div>
-                      <div class="select__icon">
-                        <svg class="icon">
-                          <use xlink:href="#arrow-down"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="select-list">
-                      <div class="select-list__inner custom-scroll">
-                        <div class="selet-option" data-value="value0">Sed ut perspiciatis</div>
-                        <div class="selet-option" data-value="value1">Nemo enim ipsam</div>
-                        <div class="selet-option" data-value="value2">Et harum quidem</div>
-                        <div class="selet-option" data-value="value3">Temporibus autem</div>
-                        <div class="selet-option" data-value="value4">Itaque earum rerum</div>
-                        <div class="selet-option" data-value="value5">Et harum quidem</div>
-                        <div class="selet-option" data-value="value6">Temporibus autem</div>
-                        <div class="selet-option" data-value="value7">Itaque earum rerum</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form__cell">
-                  <label class="form__label">
-                    <input class="form__input" type="text" placeholder="Ваш e-mail"/>
-                  </label>
-                </div>
-                <div class="form__cell">
-                  <label class="form__label">
-                    <input class="form__input" type="text" placeholder="Ваше имя"/>
-                  </label>
-                </div>
-              </div>
-              <div class="form__line">
-                <div class="form__cell form__cell-2x">
-                  <div class="range-slider">
-                    <div class="range-slider__name">Sed ut perspiciatis, unde omnis iste natus</div>
-                    <input type="range" min="1" max="100" step="1" value="50" data-orientation="horizontal">
-                  </div>
-                </div>
-                <div class="form__cell">
-                  <div class="attach-file">
-                    <label class="file-label">
-                      <input class="input-file" type="file"><span class="input-file__button__wrap"><span class="input-file__button">
+            <div class="section-getFree__inner">
+              <!--left-->
+              <div class="section-getFree__items">
+                <div class="services-list__wrapper">
+                  <ul class="services-list">
+                    <div class="services-list__item-wrapper"><a class="services-list__item" href="search_clients.html">
+                        <div class="services-list__item-icon">
                           <svg class="icon">
-                            <use xlink:href="#document-icon"></use>
-                          </svg><span class="name">Прикрепить файл</span></span></span>
-                    </label>
-                    <div class="attach-file__uploaded__wrap">
-                      <div class="attach-file__uploaded">
-                        <div class="uploaded__name"></div><a class="uploaded__remove" href="#remove-file">
+                            <use xlink:href="images/skipped-optim.svg#services-search"></use>
+                          </svg>
+                        </div>
+                        <div class="services-list__item-data">
+                          <div class="services-list__item-title">Поиск клиентов на международном рынке</div>
+                          <div class="services-list__item-text">и получите бесплатные услуги от команды Likwid</div>
+                        </div></a></div>
+                    <div class="services-list__item-wrapper"><a class="services-list__item" href="search_clients.html">
+                        <div class="services-list__item-icon">
                           <svg class="icon">
-                            <use xlink:href="#close-icon"></use>
-                          </svg></a>
-                      </div>
-                    </div>
-                  </div>
+                            <use xlink:href="images/skipped-optim.svg#services-create"></use>
+                          </svg>
+                        </div>
+                        <div class="services-list__item-data">
+                          <div class="services-list__item-title">Создание маркетинговых материалов</div>
+                          <div class="services-list__item-text">и получите бесплатные услуги от команды Likwid</div>
+                        </div></a></div>
+                    <div class="services-list__item-wrapper"><a class="services-list__item" href="search_clients.html">
+                        <div class="services-list__item-icon">
+                          <svg class="icon">
+                            <use xlink:href="images/skipped-optim.svg#services-site"></use>
+                          </svg>
+                        </div>
+                        <div class="services-list__item-data">
+                          <div class="services-list__item-title">Создание сайта</div>
+                          <div class="services-list__item-text">и получите бесплатные услуги от команды Likwid</div>
+                        </div></a></div>
+                    <div class="services-list__item-wrapper"><a class="services-list__item" href="search_clients.html">
+                        <div class="services-list__item-icon">
+                          <svg class="icon">
+                            <use xlink:href="images/skipped-optim.svg#services-translate"></use>
+                          </svg>
+                        </div>
+                        <div class="services-list__item-data">
+                          <div class="services-list__item-title">Перевод на новые языки</div>
+                          <div class="services-list__item-text">и получите бесплатные услуги от команды Likwid</div>
+                        </div></a></div>
+                  </ul>
                 </div>
               </div>
-              <div class="form__bottom">
-                <div class="form__cell">
-                  <button class="btn btn-default btn-lg btn-wide" type="submit"><span>Отправить</span></button>
-                </div>
+              <!--right-->
+              <div class="section-getFree__right">
+                <h2 class="section-getFree__title"></h2><img src="images/content/section-getFree/pc-">
               </div>
-            </form>
+            </div>
           </div>
-          <!--container-->
         </section>
-        <!--section-default-->
       </main>
       <footer class="footer">
         <div class="container">
