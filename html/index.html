@@ -24,7 +24,7 @@
     <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/main.min.css"><link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="preload">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800900&display=swap" rel="preload">
   </head>
   <body>
     <div class="svg-store">
@@ -89,7 +89,7 @@
                   <!-- Заказать звонок-->
                   <!--__________-->
                   <div class="call-block__link-wrapper">
-                    <div class="call-block__link"><a class="link" href="#">Заказать звонок</a></div>
+                    <div class="call-block__link"><a class="link popup-open" href="#">Заказать звонок</a></div>
                   </div>
                   <!--__________-->
                   <!-- Номер телефона-->
@@ -149,9 +149,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="section-main__form">
+                <div class="section-main__form form-block">
                   <form class="section-main__form-inner">
-                    <div class="section-main__form-header">
+                    <div class="form-block__header">
                       <div class="section-main__form-title">
                         <h6 class="form-title">Оставьте заявку</h6>
                       </div>
@@ -159,20 +159,20 @@
                         <p class="form-text">и получите <span class="text-active">бесплатные услуги</span> от команды <span class="text-medium">Likwid</span></p>
                       </div>
                     </div>
-                    <div class="section-main__form-body">
-                      <div class="section-main__form-row">
-                        <div class="section-main__form-col">
+                    <div class="form-block__body">
+                      <div class="form-block__row">
+                        <div class="form-block__col">
                           <input class="input-text" type="text" name="name" placeholder="Как вас зовут?"/>
                         </div>
-                        <div class="section-main__form-col">
+                        <div class="form-block__col">
                           <input class="input-text" type="text" name="email" placeholder="Ваш Email"/>
                         </div>
                       </div>
-                      <div class="section-main__form-row">
+                      <div class="form-block__row">
                         <textarea class="input-text" placeholder="Ваш комментарий.."></textarea>
                       </div>
                     </div>
-                    <div class="section-main__form-footer">
+                    <div class="form-block__footer">
                       <div class="section-main__form-submit">
                         <input class="input-submit" type="submit" value="Оставить заявку"/>
                       </div>
@@ -190,116 +190,240 @@
           <div class="container">
             <div class="section-getFree__inner">
               <!--left-->
-              <div class="section-getFree__items">
-                <div class="services-list__wrapper">
-                  <ul class="services-list">
-                    <div class="services-list__item-wrapper"><a class="services-list__item" href="search_clients.html">
-                        <div class="services-list__item-icon">
-                          <svg class="icon">
-                            <use xlink:href="images/skipped-optim.svg#services-search"></use>
-                          </svg>
-                        </div>
-                        <div class="services-list__item-data">
-                          <div class="services-list__item-title">Поиск клиентов на международном рынке</div>
-                          <div class="services-list__item-text">и получите бесплатные услуги от команды Likwid</div>
-                        </div></a></div>
-                    <div class="services-list__item-wrapper"><a class="services-list__item" href="search_clients.html">
-                        <div class="services-list__item-icon">
-                          <svg class="icon">
-                            <use xlink:href="images/skipped-optim.svg#services-create"></use>
-                          </svg>
-                        </div>
-                        <div class="services-list__item-data">
-                          <div class="services-list__item-title">Создание маркетинговых материалов</div>
-                          <div class="services-list__item-text">и получите бесплатные услуги от команды Likwid</div>
-                        </div></a></div>
-                    <div class="services-list__item-wrapper"><a class="services-list__item" href="search_clients.html">
-                        <div class="services-list__item-icon">
-                          <svg class="icon">
-                            <use xlink:href="images/skipped-optim.svg#services-site"></use>
-                          </svg>
-                        </div>
-                        <div class="services-list__item-data">
-                          <div class="services-list__item-title">Создание сайта</div>
-                          <div class="services-list__item-text">и получите бесплатные услуги от команды Likwid</div>
-                        </div></a></div>
-                    <div class="services-list__item-wrapper"><a class="services-list__item" href="search_clients.html">
-                        <div class="services-list__item-icon">
-                          <svg class="icon">
-                            <use xlink:href="images/skipped-optim.svg#services-translate"></use>
-                          </svg>
-                        </div>
-                        <div class="services-list__item-data">
-                          <div class="services-list__item-title">Перевод на новые языки</div>
-                          <div class="services-list__item-text">и получите бесплатные услуги от команды Likwid</div>
-                        </div></a></div>
-                  </ul>
-                </div>
+              <div class="services-list__wrapper section-getFree__items">
+                <ul class="services-list">
+                  <div class="services-list__item-wrapper"><a class="services-list__item" href="search_clients.html">
+                      <div class="services-list__item-icon">
+                        <svg class="icon">
+                          <use xlink:href="images/skipped-optim.svg#services-clients"></use>
+                        </svg>
+                      </div>
+                      <div class="services-list__item-data">
+                        <div class="services-list__item-title">Поиск клиентов на международном рынке</div>
+                        <p class="services-list__item-text">и получите бесплатные услуги от команды Likwid</p>
+                      </div></a></div>
+                  <div class="services-list__item-wrapper"><a class="services-list__item" href="search_clients.html">
+                      <div class="services-list__item-icon">
+                        <svg class="icon">
+                          <use xlink:href="images/skipped-optim.svg#services-create"></use>
+                        </svg>
+                      </div>
+                      <div class="services-list__item-data">
+                        <div class="services-list__item-title">Создание маркетинговых материалов</div>
+                        <p class="services-list__item-text">и получите бесплатные услуги от команды Likwid</p>
+                      </div></a></div>
+                  <div class="services-list__item-wrapper"><a class="services-list__item" href="search_clients.html">
+                      <div class="services-list__item-icon">
+                        <svg class="icon">
+                          <use xlink:href="images/skipped-optim.svg#services-site"></use>
+                        </svg>
+                      </div>
+                      <div class="services-list__item-data">
+                        <div class="services-list__item-title">Создание сайта</div>
+                        <p class="services-list__item-text">и получите бесплатные услуги от команды Likwid</p>
+                      </div></a></div>
+                  <div class="services-list__item-wrapper"><a class="services-list__item" href="translate.html">
+                      <div class="services-list__item-icon">
+                        <svg class="icon">
+                          <use xlink:href="images/skipped-optim.svg#services-translate"></use>
+                        </svg>
+                      </div>
+                      <div class="services-list__item-data">
+                        <div class="services-list__item-title">Перевод на новые языки</div>
+                        <p class="services-list__item-text">и получите бесплатные услуги от команды Likwid</p>
+                      </div></a></div>
+                </ul>
               </div>
               <!--right-->
               <div class="section-getFree__right">
-                <h2 class="section-getFree__title"></h2><img src="images/content/section-getFree/pc-">
+                <h2 class="section-getFree__title">Что вы получите бесплатно?</h2><img class="section-getFree__img" src="images/content/section-getFree/0.jpg">
               </div>
             </div>
           </div>
         </section>
-      </main>
-      <footer class="footer">
-        <div class="container">
-          <div class="footer__inner">
-            <div class="copyright">© 2018 «LoremIpsum.net» Все права защищены.</div>
-            <div class="footer__links">
-              <ul class="footer__list">
-                <li><a class="footer-link-grey qiwi footer-link" href="#" target="_blank">
-                          <div class="footer-link__icon">
-                            <svg class="icon">
-                              <use xlink:href="#qiwi-icon"></use>
-                            </svg>
-                          </div>
-                          <div class="footer-link__name">Qiwi wallet</div></a>
-                </li>
-                <li><a class="footer-link-grey yamoney footer-link" href="#" target="_blank">
-                          <div class="footer-link__icon">
-                            <svg class="icon">
-                              <use xlink:href="#yamoney-icon"></use>
-                            </svg>
-                          </div>
-                          <div class="footer-link__name">Yandex Money</div></a>
-                </li>
-                <li><a class="footer-link-grey webmoney footer-link" href="#" target="_blank">
-                          <div class="footer-link__icon">
-                            <svg class="icon">
-                              <use xlink:href="#webmoney-icon"></use>
-                            </svg>
-                          </div>
-                          <div class="footer-link__name">Web Money</div></a>
-                </li>
-              </ul>
-              <ul class="footer__list">
-                <li><a class="footer-link" href="mailto:info@ipsum228.com">
-                          <div class="footer-link__icon">
-                            <svg class="icon">
-                              <use xlink:href="#mail-icon"></use>
-                            </svg>
-                          </div>
-                          <div class="footer-link__name">info@ipsum228.com</div></a>
-                </li>
-                <li><a class="vk footer-link" href="#" target="_blank">
-                          <div class="footer-link__icon">
-                            <svg class="icon">
-                              <use xlink:href="#vk-icon"></use>
-                            </svg>
-                          </div>
-                          <div class="footer-link__name">Мы вконтакте</div></a>
-                </li>
-              </ul>
+        <section class="section-whoWork">
+          <div class="container">
+            <div class="section-whoWork__inner">
+              <h2 class="section-whoWork__title">Как работает?</h2>
+              <div class="section-whoWork__data">
+                <div class="section-whoWork__step">
+                  <div class="section-whoWork__step-inner">
+                    <div class="section-whoWork__step-header"><img class="section-whoWork__step-img" src="images/content/section-whoWork/0.jpg"/>
+                      <div class="section-whoWork__step-row">
+                        <div class="section-whoWork__step-number">1.</div>
+                        <div class="section-whoWork__step-title">Заполните заявку</div>
+                      </div>
+                      <p class="section-whoWork__step-text">Кстати, диаграммы связей представляют собой не что иное, как квинтэссенцию мы связей представляют собой не что иное, как квинтэссенцию мы связей представляют собой не что иное, как квинтэссенцию</p>
+                    </div>
+                    <div class="section-whoWork__step-body">
+                      <button class="section-whoWork__step-btn btn btn-simple popup-open">Оставить заявку</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="section-whoWork__step">
+                  <div class="section-whoWork__step-inner">
+                    <div class="section-whoWork__step-header"><img class="section-whoWork__step-img" src="images/content/section-whoWork/1.jpg"/>
+                      <div class="section-whoWork__step-row">
+                        <div class="section-whoWork__step-number">2.</div>
+                        <div class="section-whoWork__step-title">Анализ потребностей с менеджером</div>
+                      </div>
+                      <p class="section-whoWork__step-text">Кстати, диаграммы связей представляют собой не что иное, как квинтэссенцию </p>
+                    </div>
+                    <div class="section-whoWork__step-body">
+                      <button class="section-whoWork__step-btn btn btn-simple popup-open">Оставить заявку</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="section-whoWork__step">
+                  <div class="section-whoWork__step-inner">
+                    <div class="section-whoWork__step-header"><img class="section-whoWork__step-img" src="images/content/section-whoWork/2.jpg"/>
+                      <div class="section-whoWork__step-row">
+                        <div class="section-whoWork__step-number">3.</div>
+                        <div class="section-whoWork__step-title">Получении субсидии</div>
+                      </div>
+                      <p class="section-whoWork__step-text">Кстати, диаграммы связей представляют собой не что иное, как квинтэссенцию </p>
+                    </div>
+                    <div class="section-whoWork__step-body">
+                      <button class="section-whoWork__step-btn btn btn-simple popup-open">Оставить заявку</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="section-whoWork__step">
+                  <div class="section-whoWork__step-inner">
+                    <div class="section-whoWork__step-header"><img class="section-whoWork__step-img" src="images/content/section-whoWork/3.jpg"/>
+                      <div class="section-whoWork__step-row">
+                        <div class="section-whoWork__step-number">4.</div>
+                        <div class="section-whoWork__step-title">Оказание услуг</div>
+                      </div>
+                      <p class="section-whoWork__step-text">Кстати, диаграммы связей представляют собой не что иное, как квинтэссенцию </p>
+                    </div>
+                    <div class="section-whoWork__step-body">
+                      <button class="section-whoWork__step-btn btn btn-simple popup-open">Оставить заявку</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <!--footer__inner-->
+        </section>
+        <section class="section-reviews">
+          <div class="section-reviews__inner">
+            <h2 class="section-reviews__title">Письма</h2>
+            <div class="section-reviews__slider-wrapper">
+              <div class="slider-arrow">
+                <button class="slider-arrow__prev section-reviews__slider-prev">
+                  <svg class="icon">
+                    <use xlink:href="images/skipped-optim.svg#arrow-left"></use>
+                  </svg>
+                </button>
+                <button class="slider-arrow__next section-reviews__slider-next">
+                  <svg class="icon">
+                    <use xlink:href="images/skipped-optim.svg#arrow-right"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="section-reviews__slider reviews-slider">
+                <div class="section-reviews__slide"><a class="section-reviews__slide-inner" href="images/content/section-reviews/0-big.jpg"><img class="section-reviews__slide-img" src="images/content/section-reviews/0.jpg"/></a></div>
+                <div class="section-reviews__slide"><a class="section-reviews__slide-inner" href="images/content/section-reviews/1-big.jpg"><img class="section-reviews__slide-img" src="images/content/section-reviews/1.jpg"/></a></div>
+                <div class="section-reviews__slide"><a class="section-reviews__slide-inner" href="images/content/section-reviews/2-big.jpg"><img class="section-reviews__slide-img" src="images/content/section-reviews/2.jpg"/></a></div>
+                <div class="section-reviews__slide"><a class="section-reviews__slide-inner" href="images/content/section-reviews/3-big.jpg"><img class="section-reviews__slide-img" src="images/content/section-reviews/3.jpg"/></a></div>
+                <div class="section-reviews__slide"><a class="section-reviews__slide-inner" href="images/content/section-reviews/4-big.jpg"><img class="section-reviews__slide-img" src="images/content/section-reviews/4.jpg"/></a></div>
+                <div class="section-reviews__slide"><a class="section-reviews__slide-inner" href="images/content/section-reviews/4-big.jpg"><img class="section-reviews__slide-img" src="images/content/section-reviews/5.jpg"/></a></div>
+                <div class="section-reviews__slide"><a class="section-reviews__slide-inner" href="images/content/section-reviews/0-big.jpg"><img class="section-reviews__slide-img" src="images/content/section-reviews/0.jpg"/></a></div>
+                <div class="section-reviews__slide"><a class="section-reviews__slide-inner" href="images/content/section-reviews/1-big.jpg"><img class="section-reviews__slide-img" src="images/content/section-reviews/1.jpg"/></a></div>
+                <div class="section-reviews__slide"><a class="section-reviews__slide-inner" href="images/content/section-reviews/2-big.jpg"><img class="section-reviews__slide-img" src="images/content/section-reviews/2.jpg"/></a></div>
+                <div class="section-reviews__slide"><a class="section-reviews__slide-inner" href="images/content/section-reviews/3-big.jpg"><img class="section-reviews__slide-img" src="images/content/section-reviews/3.jpg"/></a></div>
+                <div class="section-reviews__slide"><a class="section-reviews__slide-inner" href="images/content/section-reviews/4-big.jpg"><img class="section-reviews__slide-img" src="images/content/section-reviews/4.jpg"/></a></div>
+                <div class="section-reviews__slide"><a class="section-reviews__slide-inner" href="images/content/section-reviews/4-big.jpg"><img class="section-reviews__slide-img" src="images/content/section-reviews/5.jpg"/></a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-helpYou">
+          <div class="container">
+            <div class="section-helpYou__inner">
+              <h2 class="section-helpYou__title">Мы поможем вашему бизнесу</h2>
+              <form class="section-helpYou__form form-block form-submit">
+                <div class="form-block__header">
+                  <div class="section-helpYou__form-title">
+                    <h6 class="form-title">Оставьте заявку</h6>
+                  </div>
+                  <div class="section-helpYou__form-text">
+                    <p class="form-text">и получите <span class="text-active">бесплатные услуги</span> от команды <span class="text-medium">Likwid</span></p>
+                  </div>
+                </div>
+                <div class="form-block__body">
+                  <div class="form-block__row">
+                    <div class="form-block__col">
+                      <input class="input-text" type="text" name="name" placeholder="Как вас зовут?"/>
+                    </div>
+                    <div class="form-block__col">
+                      <input class="input-text" type="text" name="email" placeholder="Ваш Email"/>
+                    </div>
+                  </div>
+                  <div class="form-block__row">
+                    <textarea class="input-text" placeholder="Ваш комментарий.."></textarea>
+                  </div>
+                </div>
+                <div class="section-helpYou__form-footer">
+                  <div class="section-helpYou__form-submit">
+                    <input class="input-submit" type="submit" value="Оставить заявку"/>
+                  </div>
+                  <div class="section-helpYou__form-police">
+                    <p class="form-police">*Нажимая на кнопку "Оставить заявку", вы соглашаетесь с <a href="police.html" class="text-link">политикой конфиденциальности</a></p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <div class="popup">
+          <div class="popup__inner">
+            <!--button close-->
+            <button class="popup__close popup-close">
+              <svg class="icon">
+                <use xlink:href="images/skipped-optim.svg#close"></use>
+              </svg>
+            </button>
+            <!--form-->
+            <form class="popup__form form-block form-submit">
+              <div class="form-block__header">
+                <div class="popup__form-title">
+                  <h6 class="form-title">Заказать звонок</h6>
+                </div>
+              </div>
+              <div class="form-block__body">
+                <div class="form-block__row">
+                  <div class="form-block__col">
+                    <input class="input-text" type="text" name="name" placeholder="Как вас зовут?"/>
+                  </div>
+                  <div class="form-block__col">
+                    <input class="input-text" type="text" name="email" placeholder="Ваш Email"/>
+                  </div>
+                </div>
+                <div class="form-block__row">
+                  <textarea class="input-text" placeholder="Ваш комментарий.."></textarea>
+                </div>
+              </div>
+              <div class="popup-footer">
+                <div class="popup-submit">
+                  <input class="input-submit" type="submit" value="Оставить заявку"/>
+                </div>
+                <div class="popup-police">
+                  <p class="form-police">*Нажимая на кнопку "Оставить заявку", вы соглашаетесь с <a href="police.html" class="text-link">политикой конфиденциальности</a></p>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-        <!--container-->
-      </footer>
-      <!--footer-->
+      </main>
+      <div class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer__police">© 2021 LIKWID</div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="js/main.min.js"></script>
   </body>

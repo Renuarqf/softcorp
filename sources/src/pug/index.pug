@@ -11,22 +11,22 @@ block page
                             .main-block__content
                                 h1.main-block__title Вы экспортер? Вы МСП?
                                 p.main-block__text Оставьте заявку и получите бесплатные услуги от команды LILWID
-                    .section-main__form
+                    .section-main__form.form-block
                         form.section-main__form-inner
-                            .section-main__form-header
+                            .form-block__header
                                 .section-main__form-title
                                     +formTitle({text: 'Оставьте заявку'})
                                 .section-main__form-text
                                     +formText({text: 'и получите <span class="text-active">бесплатные услуги</span> от команды <span class="text-medium">Likwid</span>'})
-                            .section-main__form-body
-                                .section-main__form-row
-                                    .section-main__form-col
+                            .form-block__body
+                                .form-block__row
+                                    .form-block__col
                                         +input-name({placeholder: 'Как вас зовут?'})
-                                    .section-main__form-col
+                                    .form-block__col
                                         +input-email({placeholder: 'Ваш Email'})
-                                .section-main__form-row
+                                .form-block__row
                                     +input-area()
-                            .section-main__form-footer
+                            .form-block__footer
                                 .section-main__form-submit
                                     +input-submit({value: 'Оставить заявку'})
                                 .section-main__form-police
@@ -35,34 +35,128 @@ block page
         .container
             .section-getFree__inner
                 //left
-                .section-getFree__items
-                    .services-list__wrapper
-                        ul.services-list
-                            +servicesItems({
-                                title: 'Поиск клиентов на международном рынке',
-                                icon: 'services-search',
-                                link: 'search_clients.html',
-                                text: 'и получите бесплатные услуги от команды Likwid'
-                            })
-                            +servicesItems({
-                                title: 'Создание маркетинговых материалов',
-                                icon: 'services-create',
-                                link: 'search_clients.html',
-                                text: 'и получите бесплатные услуги от команды Likwid'
-                            })
-                            +servicesItems({
-                                title: 'Создание сайта',
-                                icon: 'services-site',
-                                link: 'search_clients.html',
-                                text: 'и получите бесплатные услуги от команды Likwid'
-                            })
-                            +servicesItems({
-                                title: 'Перевод на новые языки',
-                                icon: 'services-translate',
-                                link: 'search_clients.html',
-                                text: 'и получите бесплатные услуги от команды Likwid'
-                            })
+                .services-list__wrapper.section-getFree__items
+                    ul.services-list
+                        +servicesItems({
+                            title: 'Поиск клиентов на международном рынке',
+                            icon: 'services-clients',
+                            link: 'search_clients.html',
+                            text: 'и получите бесплатные услуги от команды Likwid'
+                        })
+                        +servicesItems({
+                            title: 'Создание маркетинговых материалов',
+                            icon: 'services-create',
+                            link: 'search_clients.html',
+                            text: 'и получите бесплатные услуги от команды Likwid'
+                        })
+                        +servicesItems({
+                            title: 'Создание сайта',
+                            icon: 'services-site',
+                            link: 'search_clients.html',
+                            text: 'и получите бесплатные услуги от команды Likwid'
+                        })
+                        +servicesItems({
+                            title: 'Перевод на новые языки',
+                            icon: 'services-translate',
+                            link: 'translate.html',
+                            text: 'и получите бесплатные услуги от команды Likwid'
+                        })
                 //right
                 .section-getFree__right
-                    h2.section-getFree__title
-                    img(src='images/content/section-getFree/pc-')git
+                    h2.section-getFree__title Что вы получите бесплатно?
+                    img(src='images/content/section-getFree/0.jpg').section-getFree__img
+    section.section-whoWork
+        .container
+            .section-whoWork__inner
+                h2.section-whoWork__title Как работает?
+                .section-whoWork__data
+                    +whoWorkStep({
+                        img: 'images/content/section-whoWork/0.jpg',
+                        title: 'Заполните заявку',
+                        text: 'Кстати, диаграммы связей представляют собой не что иное, как квинтэссенцию мы связей представляют собой не что иное, как квинтэссенцию мы связей представляют собой не что иное, как квинтэссенцию',
+                        number: '1.'
+                    })
+                    +whoWorkStep({
+                        img: 'images/content/section-whoWork/1.jpg',
+                        title: 'Анализ потребностей с менеджером',
+                        text: 'Кстати, диаграммы связей представляют собой не что иное, как квинтэссенцию ',
+                        number: '2.'
+                    })
+                    +whoWorkStep({
+                        img: 'images/content/section-whoWork/2.jpg',
+                        title: 'Получении субсидии',
+                        text: 'Кстати, диаграммы связей представляют собой не что иное, как квинтэссенцию ',
+                        number: '3.'
+                    })
+                    +whoWorkStep({
+                        img: 'images/content/section-whoWork/3.jpg',
+                        title: 'Оказание услуг',
+                        text: 'Кстати, диаграммы связей представляют собой не что иное, как квинтэссенцию ',
+                        number: '4.'
+                    })
+    section.section-reviews
+        .section-reviews__inner
+            h2.section-reviews__title Письма
+            .section-reviews__slider-wrapper
+                .slider-arrow
+                    button.slider-arrow__prev.section-reviews__slider-prev
+                        +setSvg({name: 'arrow-left'})
+                    button.slider-arrow__next.section-reviews__slider-next
+                        +setSvg({name: 'arrow-right'})
+                .section-reviews__slider.reviews-slider
+                    +reviewsSlide({img: 'images/content/section-reviews/0.jpg', bigimg: 'images/content/section-reviews/0-big.jpg'})
+                    +reviewsSlide({img: 'images/content/section-reviews/1.jpg', bigimg: 'images/content/section-reviews/1-big.jpg'})
+                    +reviewsSlide({img: 'images/content/section-reviews/2.jpg', bigimg: 'images/content/section-reviews/2-big.jpg'})
+                    +reviewsSlide({img: 'images/content/section-reviews/3.jpg', bigimg: 'images/content/section-reviews/3-big.jpg'})
+                    +reviewsSlide({img: 'images/content/section-reviews/4.jpg', bigimg: 'images/content/section-reviews/4-big.jpg'})
+                    +reviewsSlide({img: 'images/content/section-reviews/5.jpg', bigimg: 'images/content/section-reviews/4-big.jpg'})
+                    +reviewsSlide({
+                        img: 'images/content/section-reviews/0.jpg',
+                        bigimg: 'images/content/section-reviews/0-big.jpg'
+                    })
+                    +reviewsSlide({
+                        img: 'images/content/section-reviews/1.jpg',
+                        bigimg: 'images/content/section-reviews/1-big.jpg'
+                    })
+                    +reviewsSlide({
+                        img: 'images/content/section-reviews/2.jpg',
+                        bigimg: 'images/content/section-reviews/2-big.jpg'
+                    })
+                    +reviewsSlide({
+                        img: 'images/content/section-reviews/3.jpg',
+                        bigimg: 'images/content/section-reviews/3-big.jpg'
+                    })
+                    +reviewsSlide({
+                        img: 'images/content/section-reviews/4.jpg',
+                        bigimg: 'images/content/section-reviews/4-big.jpg'
+                    })
+                    +reviewsSlide({
+                        img: 'images/content/section-reviews/5.jpg',
+                        bigimg: 'images/content/section-reviews/4-big.jpg'
+                    })
+
+
+    section.section-helpYou
+        .container
+            .section-helpYou__inner
+                h2.section-helpYou__title Мы поможем вашему бизнесу
+                form.section-helpYou__form.form-block.form-submit
+                    .form-block__header
+                        .section-helpYou__form-title
+                            +formTitle({text: 'Оставьте заявку'})
+                        .section-helpYou__form-text
+                            +formText({text: 'и получите <span class="text-active">бесплатные услуги</span> от команды <span class="text-medium">Likwid</span>'})
+                    .form-block__body
+                        .form-block__row
+                            .form-block__col
+                                +input-name({placeholder: 'Как вас зовут?'})
+                            .form-block__col
+                                +input-email({placeholder: 'Ваш Email'})
+                        .form-block__row
+                            +input-area()
+                    .section-helpYou__form-footer
+                        .section-helpYou__form-submit
+                            +input-submit({value: 'Оставить заявку'})
+                        .section-helpYou__form-police
+                            +formPolice({text: '*Нажимая на кнопку \"Оставить заявку\", вы соглашаетесь с <a href="police.html" class="text-link">политикой конфиденциальности</a>'})
+    include sections/popup

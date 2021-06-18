@@ -59,16 +59,27 @@
 }
 
 .btn-simple {
-  background: $white;
+  background: transparent;
   color: $text-color;
-  &:before {
-    border-color: $text-color;
-  }
-  .desktop &:hover {
-    color: $color-main;
 
-    &:before {
-      border-color: $color-main;
-    }
+  border: 2px solid $color-main;
+
+  border-radius: 10000px;
+
+  text-transform: none;
+
+  font-size: 1.6rem;
+
+  outline: none;
+
+  transition: all .2s ease;
+
+  &:before{
+    border-color: white;
+  }
+
+  &:hover{
+    background-color: $color-main;
+    color: white;
   }
 }

@@ -1,0 +1,24 @@
+
+.popup
+    .popup__inner
+        //button close
+        button.popup__close.popup-close
+            +setSvg({name: "close"})
+        //form
+        form.popup__form.form-block.form-submit
+            .form-block__header
+                .popup__form-title
+                    +formTitle({text: 'Заказать звонок'})
+            .form-block__body
+                .form-block__row
+                    .form-block__col
+                        +input-name({placeholder: 'Как вас зовут?'})
+                    .form-block__col
+                        +input-email({placeholder: 'Ваш Email'})
+                .form-block__row
+                    +input-area()
+            .popup-footer
+                .popup-submit
+                    +input-submit({value: 'Оставить заявку'})
+                .popup-police
+                    +formPolice({text: '*Нажимая на кнопку \"Оставить заявку\", вы соглашаетесь с <a href="police.html" class="text-link">политикой конфиденциальности</a>'})

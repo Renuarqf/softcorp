@@ -47,4 +47,23 @@ mixin servicesItems(object)
                 +setSvg({name: object.icon})
             .services-list__item-data
                 .services-list__item-title !{object.title}
-                .services-list__item-text !{object.text}
+                p.services-list__item-text !{object.text}
+
+
+mixin whoWorkStep(object)
+    .section-whoWork__step
+        .section-whoWork__step-inner
+            .section-whoWork__step-header
+                img(src=object.img).section-whoWork__step-img
+                .section-whoWork__step-row
+                    .section-whoWork__step-number !{object.number}
+                    .section-whoWork__step-title !{object.title}
+                p.section-whoWork__step-text !{object.text}
+            .section-whoWork__step-body
+                button.section-whoWork__step-btn.btn.btn-simple.popup-open Оставить заявку
+
+
+mixin reviewsSlide(object)
+    .section-reviews__slide
+        a(href=object.bigimg).section-reviews__slide-inner
+            img(src=object.img).section-reviews__slide-img
