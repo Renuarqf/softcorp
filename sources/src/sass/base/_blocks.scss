@@ -122,7 +122,297 @@
     }
   }
 
-  &__police{
+  &__police {
     margin-bottom: 0;
+  }
+}
+
+//SLDIER DOTS
+
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 0;
+
+  @include margin(-1.2rem);
+
+  li {
+    list-style-type: none;
+
+    margin: 0 1.2rem;
+
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    width: 1.2rem;
+    height: 1.2rem;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    @media screen and (max-width: $mobile-screen) {
+      width: 2.2rem;
+      height: 2.2rem;
+    }
+
+    &.slick-active button {
+      transform: scale(1);
+    }
+
+    &:after {
+      content: "";
+
+      display: block;
+
+      background-color: transparent;
+
+      width: 0.8rem;
+      height: 0.8rem;
+
+      border: 1px solid #564B47;
+
+      border-radius: 50%;
+
+      @media screen and (max-width: $mobile-screen) {
+        width: 1.7rem;
+        height: 1.7rem;
+      }
+    }
+  }
+
+  button {
+    font-size: 0;
+    background-color: $color-main;
+
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+
+    transform: scale(0);
+
+    transition: all 0.2s linear;
+
+    border-radius: 50%;
+
+    outline: none;
+    border: none;
+  }
+}
+
+//SERVICES BLOCK
+
+.services-block {
+  padding: 9rem 0;
+
+  @media screen and (max-width: $mobile-screen) {
+    padding: 5rem 0;
+  }
+
+  &:last-child{
+    padding-bottom: 0;
+  }
+
+  &_lidogen {
+    background: black url("../images/content/section-services/0.jpg") 100% 50% no-repeat;
+    background-size: contain;
+  }
+
+  &_site {
+    background: black url("../images/content/section-services/1.jpg") 100% 50% no-repeat;
+    background-size: contain;
+  }
+
+  &_translate {
+    background: black url("../images/content/section-services/2.jpg") 100% 50% no-repeat;
+    background-size: contain;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 5rem;
+
+    color: white;
+
+    text-align: left;
+
+    margin-bottom: 3rem;
+    margin-top: 0;
+
+    max-width: 70rem;
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 3.7rem;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 3.8rem;
+
+    color: $color-main;
+
+    margin-bottom: 2rem;
+    margin-top: 0;
+
+    max-width: 70rem;
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 3rem;
+    }
+  }
+
+  &__text {
+    margin-bottom: 2rem;
+
+    font-size: 2rem;
+    font-weight: 400;
+
+    color: white;
+
+    text-align: left;
+
+    max-width: 70rem;
+
+    line-height: 3.2rem;
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 2.1rem;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__btn {
+    &-cal {
+      margin-right: 3rem;
+    }
+  }
+}
+
+//REQUES
+
+.request-block {
+  background-color: black;
+
+  padding: 9rem 0;
+
+  @media screen and (max-width: $table-screen) {
+    padding: 5rem 0;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #101010;
+
+    padding: 2rem 2rem 2rem 0;
+
+    border-radius: 1.6rem;
+
+    @media screen and (max-width: $mobile-screen) {
+      padding: 0;
+    }
+  }
+
+  &__data {
+    width: 100%;
+    max-width: 500 / 1160 * 100%;
+
+    padding-top: 4rem;
+    padding-left: 6rem;
+    padding-bottom: 4rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      max-width: 53.10345%;
+    }
+
+    @media screen and (max-width: $table-screen) {
+      max-width: 51.1035%;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      max-width: none;
+
+      padding: 5rem 3rem;
+    }
+  }
+
+  &__right {
+    width: 100%;
+    max-width: 560 / 1160 * 100%;
+
+    @media screen and (max-width: $mobile-screen) {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-size: 3.7rem;
+    font-weight: 700;
+
+    margin-bottom: 2rem;
+
+    color: white;
+
+    text-align: left;
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 2.8rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: 2rem;
+    font-weight: 400;
+
+    margin-bottom: 2.4rem;
+
+    color: white;
+
+    text-align: left;
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 1.6rem;
+    }
+    
+    @media screen and (max-width: $mobile-screen) {
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    width: max-content;
+
+    @media screen and (max-width: $mobile-screen) {
+        @include margin(auto);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
   }
 }

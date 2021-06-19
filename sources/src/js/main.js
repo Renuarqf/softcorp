@@ -41,6 +41,36 @@ $(function (){
         ]
     })
 
+    $('.section-best-clients__body').slick({
+        centerMode: true,
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        adaptiveHeight: false,
+        centerPadding: "18rem",
+        dots: true,
+        appendDots: $('.section-best-clients__dots'),
+        prevArrow: $('button.section-best-clients__arrow-prev'),
+        nextArrow: $('button.section-best-clients__arrow-next'),
+        responsive: [
+            {
+                breakpoint: 1023,
+                settings: {
+                    centerPadding: "13.3rem"
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    centerPadding: "8rem"
+                }
+            }
+        ]
+    })
+
+    $('.section-best-clients__body').on('afterChange', function (){
+        $('.section-best-clients__body').slick('setPosition')
+    })
+
     $('.popup-close').on('click', function (){
         $('.popup').removeClass('active');
     });
@@ -48,6 +78,5 @@ $(function (){
     $('.popup-open').on('click', function (){
        $('.popup').addClass('active');
     });
-
 
 })

@@ -67,3 +67,8 @@ mixin reviewsSlide(object)
     .section-reviews__slide
         a(href=object.bigimg).section-reviews__slide-inner
             img(src=object.img).section-reviews__slide-img
+
+mixin footerSocial(object)
+    li.footer__social-item
+        a(href=object.link).footer__social-link
+            +setSvg({name: object.icon})
