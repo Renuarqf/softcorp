@@ -1,20 +1,20 @@
-$(function (){
-    $('.menu-toggle').on('click', function (){
+$(function () {
+    $('.menu-toggle').on('click', function () {
         $(this).toggleClass('active')
         $('.menu-list').slideToggle(250);
     })
 
-    $('.langs-block__active').on('click', function (){
+    $('.langs-block__active').on('click', function () {
         $('.lang-toggle').toggleClass('active')
         $(this).toggleClass('active')
     })
 
-    $('.section-reviews__slider.reviews-slider').slick({
+    $('.section-letter__slider.letter-slider').slick({
         slidesToShow: 6,
         slidesToScroll: 3,
         infinite: true,
-        prevArrow: $('button.slider-arrow__prev.section-reviews__slider-prev'),
-        nextArrow: $('button.slider-arrow__next.section-reviews__slider-next'),
+        prevArrow: $('button.slider-arrow__prev.section-letter__slider-prev'),
+        nextArrow: $('button.slider-arrow__next.section-letter__slider-next'),
         responsive: [
             {
                 breakpoint: 1700,
@@ -67,16 +67,65 @@ $(function (){
         ]
     })
 
-    $('.section-best-clients__body').on('afterChange', function (){
+    $('.section-reviews__slider.reviews-slider').slick({
+        slidesToScroll: 3,
+        slidesToShow: 3,
+        prevArrow: $('button.section-reviews__arrow-prev'),
+        nextArrow: $('button.section-reviews__arrow-next'),
+        responsive: [
+            {
+                breakpoint: 1023,
+                settings: {
+                    slidesToScroll: 2,
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToScroll: 1,
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    })
+
+    $('.section-site-portfolio__slider.site-slider').slick({
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        centerPadding: "50rem",
+        autoplay: true,
+        autoplaySpeed: 2000,
+        centerMode: true,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1023,
+                settings: {
+                    slidesToScroll: 1,
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToScroll: 1,
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    })
+
+    $('.section-best-clients__body').on('afterChange', function () {
         $('.section-best-clients__body').slick('setPosition')
     })
 
-    $('.popup-close').on('click', function (){
+    $('.popup-close').on('click', function () {
         $('.popup').removeClass('active');
     });
 
-    $('.popup-open').on('click', function (){
-       $('.popup').addClass('active');
+    $('.popup-open').on('click', function () {
+        $('.popup').addClass('active');
     });
 
 })

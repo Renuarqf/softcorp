@@ -221,7 +221,7 @@
     padding: 5rem 0;
   }
 
-  &:last-child{
+  &:last-child {
     padding-bottom: 0;
   }
 
@@ -317,6 +317,10 @@
     padding: 5rem 0;
   }
 
+  &_padding {
+    padding: 5rem 0;
+  }
+
   &__inner {
     display: flex;
     align-items: center;
@@ -395,9 +399,9 @@
     text-align: left;
 
     @media screen and (max-width: $table-screen) {
-      font-size: 1.6rem;
+      font-size: 1.7rem;
     }
-    
+
     @media screen and (max-width: $mobile-screen) {
       text-align: center;
     }
@@ -407,12 +411,378 @@
     width: max-content;
 
     @media screen and (max-width: $mobile-screen) {
-        @include margin(auto);
+      @include margin(auto);
     }
   }
 
   &__img {
     width: 100%;
     height: auto;
+  }
+}
+
+
+//BLOCK INFORMATION
+
+.block-information {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 2rem 0;
+
+  @include margin(-1.5rem);
+
+  @media screen and (max-width: $mobile-screen) {
+    flex-direction: column-reverse;
+  }
+
+  &_revers {
+    flex-direction: row-reverse;
+
+    @media screen and (max-width: $mobile-screen) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__col {
+    width: 100%;
+    max-width: 50%;
+
+    padding: 0 1.5rem;
+
+    @media screen and (max-width: $mobile-screen) {
+      max-width: none;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__title {
+    font-size: 3.8rem;
+    font-weight: 700;
+
+    margin-bottom: 2rem;
+    margin-top: 0;
+
+    color: white;
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 3rem;
+    }
+
+    &_center {
+      text-align: center;
+    }
+
+    &_active {
+      color: $color-main;
+    }
+
+    &_450 {
+      max-width: 45rem;
+      @include margin(auto);
+    }
+  }
+
+  &__subtitle {
+    font-size: 2rem;
+
+    color: white;
+
+    margin-bottom: 0;
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 1.7rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      margin-bottom: 3rem;
+
+      font-size: 2rem;
+    }
+
+    &_center {
+      text-align: center;
+    }
+
+    &_active {
+      color: $color-main;
+    }
+
+    &_450 {
+      max-width: 45rem;
+      @include margin(auto)
+    }
+  }
+}
+
+//BLOCK SOCIALS
+
+.block-socials {
+
+  @media screen and (max-width: $mobile-screen) {
+    @include margin(-1rem);
+  }
+
+  &__list {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    padding: 0;
+
+    @include margin(-2rem);
+
+    @media screen and (max-width: $mobile-screen) {
+      @include margin(auto)
+    }
+  }
+
+  &__item {
+    list-style-type: none;
+
+    display: block;
+
+    margin: 2rem;
+
+    width: 8rem;
+    height: 8rem;
+
+    @media screen and (max-width: $table-screen) {
+      width: 6.6rem;
+      height: 6.6rem;
+
+      margin: 1rem;
+    }
+  }
+
+  &__item-inner {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//BLOCK CART
+
+.block-cart {
+
+  &__list {
+    padding: 0;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    @include margin(-1.5rem);
+  }
+
+  &__item {
+    width: 100%;
+    padding: 1.5rem;
+
+    &_2 {
+      max-width: 50%;
+
+      @media screen and (max-width: $mobile-screen) {
+        max-width: none;
+      }
+    }
+  }
+
+  &__item-inner {
+    background-color: #101010;
+
+    padding: 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    height: 100%;
+
+    @media screen and (max-width: $table-screen) {
+      padding: 2rem;
+    }
+  }
+
+  &__data {
+    padding-left: 2rem;
+
+    width: 100%;
+    max-width: 39.6rem;
+
+    @media screen and (max-width: $table-screen) {
+      padding-left: 3rem;
+    }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    margin-bottom: 0.8rem;
+    margin-top: 0;
+
+    color: white;
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 2.2rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 2.6rem;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 1.8rem;
+
+    color: white;
+
+    margin-bottom: 0;
+    margin-top: 0;
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 1.6rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 2rem;
+    }
+  }
+
+  &__icon {
+    width: 100%;
+    max-width: 5rem;
+    height: 5rem;
+
+    @media screen and (max-width: $mobile-screen) {
+      min-height: 7rem;
+      min-width: 7rem;
+    }
+
+    .icon {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+//BLOCK INTRO
+
+.block-intro{
+
+  &__title {
+    font-size: 8.8rem;
+    font-weight: 600;
+
+    text-align: left;
+
+    color: white;
+
+    margin-bottom: 4rem;
+    margin-top: 5rem;
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 6.4rem;
+      margin-top: 0;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 4.4rem;
+    }
+
+    &_mb{
+      margin-bottom: 10rem;
+    }
+  }
+
+  .input-text {
+    @media screen and (max-width: $table-screen) {
+      font-size: 1.7rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 2rem;
+    }
+  }
+
+  .input-submit {
+    @media screen and (max-width: $table-screen) {
+      font-size: 1.7rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 2rem;
+
+      padding: 2rem 5.8rem;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 2rem;
+
+    margin-bottom: 6rem;
+
+    color: white;
+
+    max-width: 47rem;
+
+    @media screen and (max-width: $table-screen) {
+      margin-bottom: 4rem;
+    }
+  }
+  
+  &__form{
+    &_bg{
+      width: max-content;
+      padding: 3rem;
+      background-color: $form-bg;
+
+      border-radius: 1.6rem;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    @include margin(-2rem);
+
+    @media screen and (max-width: $mobile-screen) {
+      flex-direction: column;
+      align-items: flex-start;
+
+      @include margin(0);
+    }
+  }
+
+  &__col {
+    padding: 0 2rem;
+
+    @media screen and (max-width: $mobile-screen) {
+      margin-bottom: 4rem;
+      padding: 0;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
   }
 }
