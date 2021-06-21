@@ -82,6 +82,9 @@
   }
 
   &__right{
+    @media screen and (max-width: $table-screen) {
+      min-width: 20rem;
+    }
     @media screen and (max-width: $mobile-screen) {
       //margin-top: 4rem;
 
@@ -236,6 +239,13 @@
     font-size: 2.8rem;
 
     margin-top: 2rem;
+
+    .tel{
+      width: 100%;
+      display: block;
+
+      text-align: right;
+    }
   }
   
   .logo{

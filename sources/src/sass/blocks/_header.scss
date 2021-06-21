@@ -8,6 +8,12 @@
   z-index: 500;
   transition: padding $anim ease;
 
+  &.fixed{
+    position: fixed;
+
+    background-color: $form-bg;
+  }
+
   @media screen and (max-width: $desctop-xs) {
     padding: 3rem 0;
   }
@@ -30,18 +36,6 @@
       margin-right: 7rem;
     }
   }
-
-  //&:before {
-  //  content: '';
-  //  display: block;
-  //  position: absolute;
-  //  top: 0;
-  //  left: 0;
-  //  right: 0;
-  //  bottom: 0;
-  //  background: $header-bg;
-  //  opacity: .9;
-  //}
 
   .header__inner {
     display: flex;
@@ -201,7 +195,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: $header-bg;
+      background: $form-bg;
       opacity: .9;
     }
   }

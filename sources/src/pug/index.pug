@@ -2,7 +2,7 @@ extends base/_layout
 block head
     title Главная
 block page
-    section.section-main(style="background-image:url(images/content/main-section/bg-pc.jpg)")
+    section(id='first-section').section-main(style="background-image:url(images/content/main-section/bg-pc.jpg)")
         .section-main__wrapper
             .container
                 .section-main__inner
@@ -52,7 +52,7 @@ block page
                         +servicesItems({
                             title: 'Создание сайта',
                             icon: 'services-site',
-                            link: 'search_clients.html',
+                            link: 'free_site.html',
                             text: 'и получите бесплатные услуги от команды Likwid'
                         })
                         +servicesItems({
@@ -106,51 +106,33 @@ block page
                 .section-letter__slider.letter-slider
                     +letterSlide({
                         img: 'images/content/section-letter/0.jpg',
-                        bigimg: 'images/content/section-letter/0-big.jpg'
+                        bigimg: 'images/content/section-letter/0.jpg',
+                        id: 'id-1'
                     })
                     +letterSlide({
                         img: 'images/content/section-letter/1.jpg',
-                        bigimg: 'images/content/section-letter/1-big.jpg'
+                        bigimg: 'images/content/section-letter/1.jpg',
+                        id: 'id-2'
                     })
                     +letterSlide({
                         img: 'images/content/section-letter/2.jpg',
-                        bigimg: 'images/content/section-letter/2-big.jpg'
+                        bigimg: 'images/content/section-letter/2.jpg',
+                        id: 'id-3'
                     })
                     +letterSlide({
                         img: 'images/content/section-letter/3.jpg',
-                        bigimg: 'images/content/section-letter/3-big.jpg'
+                        bigimg: 'images/content/section-letter/3.jpg',
+                        id: 'id-4'
                     })
                     +letterSlide({
                         img: 'images/content/section-letter/4.jpg',
-                        bigimg: 'images/content/section-letter/4-big.jpg'
+                        bigimg: 'images/content/section-letter/4.jpg',
+                        id: 'id-5'
                     })
                     +letterSlide({
                         img: 'images/content/section-letter/5.jpg',
-                        bigimg: 'images/content/section-letter/4-big.jpg'
-                    })
-                    +letterSlide({
-                        img: 'images/content/section-letter/0.jpg',
-                        bigimg: 'images/content/section-letter/0-big.jpg'
-                    })
-                    +letterSlide({
-                        img: 'images/content/section-letter/1.jpg',
-                        bigimg: 'images/content/section-letter/1-big.jpg'
-                    })
-                    +letterSlide({
-                        img: 'images/content/section-letter/2.jpg',
-                        bigimg: 'images/content/section-letter/2-big.jpg'
-                    })
-                    +letterSlide({
-                        img: 'images/content/section-letter/3.jpg',
-                        bigimg: 'images/content/section-letter/3-big.jpg'
-                    })
-                    +letterSlide({
-                        img: 'images/content/section-letter/4.jpg',
-                        bigimg: 'images/content/section-letter/4-big.jpg'
-                    })
-                    +letterSlide({
-                        img: 'images/content/section-letter/5.jpg',
-                        bigimg: 'images/content/section-letter/4-big.jpg'
+                        bigimg: 'images/content/section-letter/4.jpg',
+                        id: 'id-6'
                     })
 
 

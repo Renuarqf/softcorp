@@ -65,7 +65,7 @@ mixin whoWorkStep(object)
 
 mixin letterSlide(object)
     .section-letter__slide
-        a(href=object.bigimg).section-letter__slide-inner
+        a(href=object.bigimg data-fancybox='gallery' data-caption="My caption" data-type="image").section-letter__slide-inner
             img(src=object.img).section-letter__slide-img
 
 mixin footerSocial(object)
