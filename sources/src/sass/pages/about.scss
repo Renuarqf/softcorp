@@ -1,20 +1,24 @@
-.section-about{
+.section-about {
   background-color: black;
   padding: 18rem 0 5rem;
 
   position: relative;
 
-  &__inner{
+  @media screen and (max-width: $mobile-screen) {
+    padding: 10rem 0 5rem;
+  }
+
+  &__inner {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
 
     @media screen and (max-width: $table-screen) {
-        flex-direction: column;
+      flex-direction: column;
     }
   }
 
-  &__data{
+  &__data {
     max-width: 550 / 1160 * 100%;
 
     @media screen and (max-width: $table-screen) {
@@ -30,21 +34,21 @@
       position: relative;
       z-index: 10;
     }
-    
+
     @media screen and (max-width: $mobile-screen) {
-        flex-direction: column;
+      flex-direction: column;
     }
 
-    &-row{
+    &-row {
       width: 100%;
 
       @media screen and (max-width: $table-screen) {
         max-width: 50%;
         padding: 1.5rem;
       }
-      
+
       @media screen and (max-width: $mobile-screen) {
-          max-width: none;
+        max-width: none;
       }
     }
   }
@@ -75,7 +79,7 @@
     }
   }
 
-  &__subtitle{
+  &__subtitle {
     font-size: 3.8rem;
     font-weight: 700;
 
@@ -85,13 +89,13 @@
     text-align: left;
 
     color: $color-main;
-    
+
     @media screen and (max-width: $mobile-screen) {
       font-size: 3.3rem;
     }
   }
 
-  &__text{
+  &__text {
     font-size: 2rem;
     font-weight: 400;
 
@@ -103,7 +107,7 @@
     color: white;
   }
 
-  &__right{
+  &__right {
     width: 100%;
     max-width: 550 / 1160 * 100%;
 
@@ -112,7 +116,7 @@
     }
   }
 
-  &__img{
+  &__img {
     width: 100%;
     height: auto;
   }
@@ -120,22 +124,18 @@
 
 //ABOUT MAP
 
-.section-about-map{
+.section-about-map {
   background-color: black;
 
   padding: 5rem 0;
 
   position: relative;
 
-  @media screen and (max-width: $mobile-screen) {
-    padding-bottom: 15rem;
-  }
-
-  &__inner{
+  &__inner {
 
   }
 
-  &__img{
+  &__img {
     width: 100%;
     height: auto;
   }

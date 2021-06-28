@@ -1,17 +1,19 @@
 .section-free-site {
-  background: black url('../images/content/section-free-site/bg.jpg') 85% 100% no-repeat;
-  background-size: 55rem 35rem;
+  background: #000 url(../images/content/section-free-site/bg.jpg) 95% 82% no-repeat;
+  background-size: 86rem 41rem;
 
   padding-top: 18rem;
   padding-bottom: 5rem;
 
   @media screen and (max-width: $desctop-xs) {
-    background-position: 100% 100%;
-    background-size: 69rem 40rem;
+    background-position: 113% 65%;
+    background-size: 62rem 36rem;
+
   }
 
   @media screen and (max-width: $table-screen) {
-    background-position: 308% 90%;
+    background-position: 168% 87%;
+    background-size: 59rem 32rem;
   }
 
   @media screen and (max-width: $mobile-screen) {
@@ -255,6 +257,10 @@
   padding: 5rem 0;
 
   position: relative;
+  
+  @media screen and (max-width: $mobile-screen) {
+    padding-bottom: 30rem;
+  }
 
   &__title {
     font-size: 8.8rem;
@@ -324,8 +330,10 @@
       top: auto;
       left: auto;
       right: 0;
-      bottom: 0;
+      bottom: -32rem;
       z-index: 1;
+
+      max-width: 79.27586%;
     }
 
     .img {

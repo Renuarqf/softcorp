@@ -222,10 +222,6 @@
 .services-block {
   padding: 9rem 0;
 
-  @media screen and (max-width: $mobile-screen) {
-    padding: 5rem 0;
-  }
-
   &:last-child {
     padding-bottom: 0;
   }
@@ -243,6 +239,11 @@
   &_translate {
     background: black url("../images/content/section-services/2.jpg") 100% 50% no-repeat;
     background-size: contain;
+  }
+
+  @media screen and (max-width: $mobile-screen) {
+    padding-top: 25rem;
+    background-position: 0 0;
   }
 
   &__title {
@@ -836,10 +837,14 @@
   background: $form-bg;
 
   @media screen and (max-width: $mobile-screen) {
-    max-width: 36rem;
     padding: 3rem;
 
     transform: translate(0, 0);
+
+    position: static;
+    max-width: none;
+
+    margin-bottom: 5rem;
   }
 
   &__row {

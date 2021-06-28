@@ -77,6 +77,10 @@
     max-width: 33.3333%;
 
     padding: 2rem;
+    
+    @media screen and (max-width: $mobile-screen) {
+        max-width: 100%;
+    }
 
     &-inner {
       width: 100%;

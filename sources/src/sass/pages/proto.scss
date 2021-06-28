@@ -8,6 +8,10 @@
   @media screen and (max-width: $table-screen) {
     padding-bottom: 5rem;
   }
+  
+  @media screen and (max-width: $mobile-screen) {
+    padding-top: 10rem;
+  }
 
   &__inner {
     display: flex;
@@ -45,7 +49,7 @@
     }
 
     @media screen and (max-width: $mobile-screen) {
-      font-size: 1.9rem;
+      display: none;
     }
   }
 
@@ -74,6 +78,10 @@
   }
 
   &__labels {
+
+    @media screen and (max-width: $mobile-screen) {
+      display: none;
+    }
 
     &-row {
       display: flex;

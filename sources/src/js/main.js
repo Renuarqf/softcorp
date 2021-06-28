@@ -123,6 +123,7 @@ $(function () {
                 settings: {
                     slidesToScroll: 1,
                     slidesToShow: 1,
+                    centerMode: false,
                 }
             }
         ]
@@ -161,7 +162,9 @@ $(function () {
         }else{
             $('header').removeClass('fixed');
             $('.menu-toggle').removeClass('active')
-            $('.menu-list').slideUp(250);
+            if($(window).innerWidth <= 1280){
+                $('.menu-list').slideUp(250);
+            }
         }
     })
 

@@ -11,6 +11,8 @@
   &.fixed{
     position: fixed;
 
+    padding: 1em 0;
+
     background-color: $form-bg;
   }
 
@@ -156,6 +158,7 @@
 
 .menu-list {
   display: block;
+
   @media screen and (max-width: $desctop-xs) {
     display: none;
     position: absolute;
@@ -212,7 +215,7 @@
 
   @media screen and (max-width: $mobile-screen) {
       &:before{
-        top: 2rem;
+        top: 1.4rem;
       }
   }
 }
@@ -243,6 +246,10 @@
     color: $white;
     font-weight: 400;
     transition: color $anim ease;
+
+    &:hover{
+      color: #b36730;
+    }
 
     &.active {
       color: $color-main;
