@@ -2,35 +2,36 @@ extends base/_layout
 block head
     title Главная
 block page
-    section(id='first-section').section-main(style="background-image:url(images/content/main-section/bg-pc.jpg)")
-        .section-main__wrapper
-            .container
-                .section-main__inner
-                    .section-main__data
-                        .main-block
-                            .main-block__content
-                                h1.main-block__title Вы экспортер? Вы МСП?
-                                p.main-block__text Оставьте заявку и получите бесплатные услуги от команды LILWID
-                    .section-main__form.form-block
-                        form.section-main__form-inner
-                            .form-block__header
-                                .section-main__form-title
-                                    +formTitle({text: 'Оставьте заявку'})
-                                .section-main__form-text
-                                    +formText({text: 'и получите <span class="text-active">бесплатные услуги</span> от команды <span class="text-medium">Likwid</span>'})
-                            .form-block__body
-                                .form-block__row
-                                    .form-block__col
-                                        +input-name({placeholder: 'Как вас зовут?'})
-                                    .form-block__col
-                                        +input-email({placeholder: 'Ваш Email'})
-                                .form-block__row
-                                    +input-area()
-                            .form-block__footer
-                                .section-main__form-submit
-                                    +input-submit({value: 'Оставить заявку'})
-                                .section-main__form-police
-                                    +formPolice({text: '*Нажимая на кнопку \"Оставить заявку\", <br> вы соглашаетесь с <a href="police.html" class="text-link">политикой конфиденциальности</a>'})
+    section.section-main(id='first-section' style="background-image:url(images/content/main-section/bg-pc.jpg)")
+        .section-main__wrapper(id='first-wrapper')
+            .section-main__inner-2
+                .container
+                    .section-main__inner
+                        .section-main__data(data-aos="fade-up")
+                            .main-block
+                                .main-block__content
+                                    h1.main-block__title Вы экспортер? Вы МСП?
+                                    p.main-block__text Оставьте заявку и получите бесплатные услуги от команды LILWID
+                        .section-main__form.form-block(data-aos="fade-up")
+                            form.section-main__form-inner
+                                .form-block__header
+                                    .section-main__form-title
+                                        +formTitle({text: 'Оставьте заявку'})
+                                    .section-main__form-text
+                                        +formText({text: 'и получите <span class="text-active">бесплатные услуги</span> от команды <span class="text-medium">Likwid</span>'})
+                                .form-block__body
+                                    .form-block__row
+                                        .form-block__col
+                                            +input-name({placeholder: 'Как вас зовут?'})
+                                        .form-block__col
+                                            +input-email({placeholder: 'Ваш Email'})
+                                    .form-block__row
+                                        +input-area()
+                                .form-block__footer
+                                    .section-main__form-submit
+                                        +input-submit({value: 'Оставить заявку'})
+                                    .section-main__form-police
+                                        +formPolice({text: '*Нажимая на кнопку \"Оставить заявку\", <br> вы соглашаетесь с <a href="police.html" class="text-link">политикой конфиденциальности</a>'})
     section.section-getFree
         .container
             .section-getFree__inner
@@ -62,13 +63,13 @@ block page
                             text: 'и получите бесплатные услуги от команды Likwid'
                         })
                 //right
-                .section-getFree__right
+                .section-getFree__right(data-aos="fade-left")
                     h2.section-getFree__title Что вы получите бесплатно?
                     img(src='images/content/section-getFree/0.jpg').section-getFree__img
     section.section-whoWork
         .container
             .section-whoWork__inner
-                h2.section-whoWork__title Как работает?
+                h2.section-whoWork__title(data-aos="fade-up") Как работает?
                 .section-whoWork__data
                     +whoWorkStep({
                         img: 'images/content/section-whoWork/0.jpg',
@@ -94,10 +95,11 @@ block page
                         text: 'Кстати, диаграммы связей представляют собой не что иное, как квинтэссенцию ',
                         number: '4.'
                     })
+    include sections/section-logo
     section.section-letter
         .section-letter__inner
-            h2.section-letter__title Письма
-            .section-letter__slider-wrapper
+            h2.section-letter__title(data-aos="fade-up") Письма
+            .section-letter__slider-wrapper(data-aos="fade-up")
                 .slider-arrow
                     button.slider-arrow__prev.section-letter__slider-prev
                         +setSvg({name: 'arrow-left'})
@@ -135,28 +137,28 @@ block page
                         id: 'id-6'
                     })
 
-
-    section.section-helpYou
-        .container
-            .section-helpYou__inner
-                h2.section-helpYou__title Мы поможем вашему бизнесу
-                form.section-helpYou__form.form-block.form-submit
-                    .form-block__header
-                        .section-helpYou__form-title
-                            +formTitle({text: 'Оставьте заявку'})
-                        .section-helpYou__form-text
-                            +formText({text: 'и получите <span class="text-active">бесплатные услуги</span> от команды <span class="text-medium">Likwid</span>'})
-                    .form-block__body
-                        .form-block__row
-                            .form-block__col
-                                +input-name({placeholder: 'Как вас зовут?'})
-                            .form-block__col
-                                +input-email({placeholder: 'Ваш Email'})
-                        .form-block__row
-                            +input-area()
-                    .section-helpYou__form-footer
-                        .section-helpYou__form-submit
-                            +input-submit({value: 'Оставить заявку'})
-                        .section-helpYou__form-police
-                            +formPolice({text: '*Нажимая на кнопку \"Оставить заявку\", вы соглашаетесь с <a href="police.html" class="text-link">политикой конфиденциальности</a>'})
+    section.section-helpYou(id='help-you')
+        .section-helpYou__wrapper
+            .container
+                .section-helpYou__inner
+                    h2.section-helpYou__title(data-aos="fade-up") Мы поможем вашему бизнесу
+                    form.section-helpYou__form.form-block.form-submit(data-aos="fade-down")
+                        .form-block__header
+                            .section-helpYou__form-title
+                                +formTitle({text: 'Оставьте заявку'})
+                            .section-helpYou__form-text
+                                +formText({text: 'и получите <span class="text-active">бесплатные услуги</span> от команды <span class="text-medium">Likwid</span>'})
+                        .form-block__body
+                            .form-block__row
+                                .form-block__col
+                                    +input-name({placeholder: 'Как вас зовут?'})
+                                .form-block__col
+                                    +input-email({placeholder: 'Ваш Email'})
+                            .form-block__row
+                                +input-area()
+                        .section-helpYou__form-footer
+                            .section-helpYou__form-submit
+                                +input-submit({value: 'Оставить заявку'})
+                            .section-helpYou__form-police
+                                +formPolice({text: '*Нажимая на кнопку \"Оставить заявку\", вы соглашаетесь с <a href="police.html" class="text-link">политикой конфиденциальности</a>'})
     include sections/popup

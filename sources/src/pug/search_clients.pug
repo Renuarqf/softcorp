@@ -6,9 +6,9 @@ block page
         .container
             .section-search-clients__inner
                 .block-intro
-                    h2.block-intro__title Постоянно ищете клиентов?
-                    .block-intro__subtitle Оставьте заявку и получите бесплатные услуги от команды LILWID
-                    .block-intro__form
+                    h2.block-intro__title(data-aos='fade-up' id='intro-title') Постоянно ищете клиентов?
+                    .block-intro__subtitle(data-aos='fade-down' data-aos-delay='500' data-aos-anchor='#intro-title') Оставьте заявку и получите бесплатные услуги от команды LILWID
+                    .block-intro__form(data-aos='fade-down' data-aos-delay='800')
                         .block-intro__row
                             .block-intro__col
                                 +input-name({placeholder: 'Как вас зовут?'})
@@ -19,15 +19,15 @@ block page
     section.section-who-searching-clients
         .container
             .section-who-searching-clients__inner
-                h2.section-who-searching-clients__title Как это работает?
-                .section-who-searching-clients__subtitle Мы делаемуникальные решения для поиска и утепления потенциальных клиентов в B2B и B2C.
+                h2.section-who-searching-clients__title(data-aos='fade-up') Как это работает?
+                .section-who-searching-clients__subtitle(data-aos='fade-down' data-aos-delay='500') Мы делаемуникальные решения для поиска и утепления потенциальных клиентов в B2B и B2C.
                 .section-who-searching-clients__data
 
                     //BLOCK INFORMATION START
                     .block-information.block-information_revers
                         .block-information__col
                             img(src='images/content/section-who-searching-clients/0.jpg').block-information__img
-                        .block-information__col
+                        .block-information__col(data-aos='fade-up')
                             h3.block-information__title.block-information__title_center.block-information__title_active.block-information__title_450 Определяем портрет вашего клиента
                             .block-information__subtitle.block-information__subtitle_center.block-information__title_450 Загрузим менеджеров по продажам теплыми звонками, встречами и сделками.
                     //BLOCK INFORMATION END
@@ -57,7 +57,7 @@ block page
                                     +socialItem({src: 'images/content/block-socials/17.svg'})
                                     +socialItem({src: 'images/content/block-socials/18.svg'})
                                     +socialItem({src: 'images/content/block-socials/19.svg'})
-                        .block-information__col
+                        .block-information__col(data-aos='fade-up')
                             h3.block-information__title.block-information__title_center.block-information__title_active.block-information__title_450 Выбираем источник
                             .block-information__subtitle.block-information__subtitle_center.block-information__title_450 Загрузим менеджеров по продажам теплыми звонками.
                     //BLOCK INFORMATION END
@@ -66,7 +66,7 @@ block page
                     .block-information.block-information_revers
                         .block-information__col
                             img(src='images/content/section-who-searching-clients/1.jpg').block-information__img
-                        .block-information__col
+                        .block-information__col(data-aos='fade-up')
                             h3.block-information__title.block-information__title_center.block-information__title_active.block-information__title_450 Утепляем клиентов
                             .block-information__subtitle.block-information__subtitle_center.block-information__title_450 Загрузим менеджеров по продажам теплыми звонками, встречами и сделками.
                     //BLOCK INFORMATION END
@@ -75,14 +75,14 @@ block page
                     .block-information.block-information
                         .block-information__col
                             img(src='images/content/section-who-searching-clients/2.jpg').block-information__img
-                        .block-information__col
+                        .block-information__col(data-aos='fade-up')
                             h3.block-information__title.block-information__title_center.block-information__title_active.block-information__title_450 Передаем на закрытие
                             .block-information__subtitle.block-information__subtitle_center.block-information__title_450 Загрузим менеджеров по продажам теплыми звонками, встречами и сделками.
                     //BLOCK INFORMATION END
 
     .request-block.request-block_padding
         .container
-            .request-block__inner
+            .request-block__inner(data-aos='zoom-in')
                 .request-block__data
                     .request-block__title Оставьте заявку и мы вам все расскажем
                     .request-block__text Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
@@ -93,12 +93,12 @@ block page
 
     section.section-we-searching-clients
         .container
-            h2.section-we-searching-clients__title Мы найдем вам новых клиентов
+            h2.section-we-searching-clients__title(data-aos='fade-up') Мы найдем вам новых клиентов
             .section-we-searching-clients__data
                 .block-cart
                     ul.block-cart__list
                         //ITEM START
-                        .block-cart__item.block-cart__item_2
+                        .block-cart__item.block-cart__item_2(data-aos='fade-up')
                             .block-cart__item-inner
                                 .block-cart__icon
                                     img(src='images/content/section-we-searching-clients/0.svg').icon
@@ -107,7 +107,7 @@ block page
                                     .block-cart__text Большинство ЛПРов используют социальные сети и ведут деловое общение в Facebook, LinkedIn, Telegram, WhatsApp и других сетях
                         //ITEM END
                         //ITEM START
-                        .block-cart__item.block-cart__item_2
+                        .block-cart__item.block-cart__item_2(data-aos='fade-up')
                             .block-cart__item-inner
                                 .block-cart__icon
                                     img(src='images/content/section-we-searching-clients/1.svg').icon
@@ -116,7 +116,7 @@ block page
                                     .block-cart__text Наш инструмент подходит для любых видов товаров и услуг
                         //ITEM END
                         //ITEM START
-                        .block-cart__item.block-cart__item_2
+                        .block-cart__item.block-cart__item_2(data-aos='fade-up')
                             .block-cart__item-inner
                                 .block-cart__icon
                                     img(src='images/content/section-we-searching-clients/2.svg')
@@ -125,7 +125,7 @@ block page
                                     .block-cart__text Ваши менеджеры по продажам будут звонить теплым лидам, проводить встречи, отправлять КП и перестанут искать клиентов, утеплять их и переносить данные в CRM
                         //ITEM END
                         //ITEM START
-                        .block-cart__item.block-cart__item_2
+                        .block-cart__item.block-cart__item_2(data-aos='fade-up')
                             .block-cart__item-inner
                                 .block-cart__icon
                                     img(src='images/content/section-we-searching-clients/3.svg').icon
@@ -134,7 +134,7 @@ block page
                                     .block-cart__text Найдем клиентов во всех странах и на любом языке
                         //ITEM END
                         //ITEM START
-                        .block-cart__item.block-cart__item_2
+                        .block-cart__item.block-cart__item_2(data-aos='fade-up')
                             .block-cart__item-inner
                                 .block-cart__icon
                                     img(src='images/content/section-we-searching-clients/4.svg').icon
@@ -143,7 +143,7 @@ block page
                                     .block-cart__text Регулярные отчеты состоящие из необходимой вам информации
                         //ITEM END
                         //ITEM START
-                        .block-cart__item.block-cart__item_2
+                        .block-cart__item.block-cart__item_2(data-aos='fade-up')
                             .block-cart__item-inner
                                 .block-cart__icon
                                     img(src='images/content/section-we-searching-clients/5.svg').icon
@@ -151,10 +151,11 @@ block page
                                     .block-cart__title Интеграция с CRM
                                     .block-cart__text Автоматически подгружаем лидов в CRM для оперативной реакции менеджеров по продажам и учета конверсии
                         //ITEM END
+    include sections/section-logo
     section.section-reviews
         .container
             .section-reviews__inenr
-                h2.section-reviews__title Отзывы
+                h2.section-reviews__title(data-aos='fade-up') Отзывы
                 .section-reviews__slider.reviews-slider
                     +reviewsSlide({src: 'images/content/section-reviews/0.jpg', name: 'Иван Иванов', city: 'Москва', text: '“Сотрудничество с такой профессиональной командой поддержки приносит нам постоянный и измеримый результат.”'})
                     +reviewsSlide({src: 'images/content/section-reviews/1.jpg', name: 'Ирина Вейп', city: 'Санкт-Петербург  ', text: '“Хотим отметить высокий профессионализм команды”.'})
@@ -168,7 +169,7 @@ block page
 
     .request-block.request-block_padding
         .container
-            .request-block__inner
+            .request-block__inner(data-aos='zoom-in')
                 .request-block__data
                     .request-block__title Оцените ЦА бесплатно
                     .request-block__text Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
@@ -176,5 +177,4 @@ block page
                         button.btn.btn-simple.btn-default.popup-open Оставить заявку
                 .request-block__right
                     img(src='images/content/block-request/2.jpg').request-block__img
-
     include sections/popup

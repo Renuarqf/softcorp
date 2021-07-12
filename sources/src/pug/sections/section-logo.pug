@@ -1,0 +1,48 @@
+mixin slide(object)
+    .section-logo__slide-client
+        .section-logo__slide-client-inner
+            .section-logo__slide-client-icon
+                img(src=object.src).img-normal
+                img(src=object.srcHover).img-hover
+mixin slide2(object)
+    .section-logo__slide-partners
+        .section-logo__slide-partners-inner
+            .section-logo__slide-partners-icon
+                img(src=object.src).img-normal
+                img(src=object.srcHover).img-hover
+
+
+section.section-logo
+    .container
+        .section-logo__inner
+            h2.section-logo__title Наши клиенты
+    .section-logo__slider-client-wrapper
+        .section-logo__slider-clients
+            +slide({src: 'images/content/section-logo/0.png',  srcHover: 'images/content/section-logo/0-hover.png',})
+            +slide({src: 'images/content/section-logo/1.png',  srcHover: 'images/content/section-logo/1-hover.png',})
+            +slide({src: 'images/content/section-logo/2.png',  srcHover: 'images/content/section-logo/2-hover.png',})
+            +slide({src: 'images/content/section-logo/3.png',  srcHover: 'images/content/section-logo/3-hover.png',})
+            +slide({src: 'images/content/section-logo/4.png',  srcHover: 'images/content/section-logo/4-hover.png',})
+            +slide({src: 'images/content/section-logo/5.png',  srcHover: 'images/content/section-logo/5-hover.png',})
+            +slide({src: 'images/content/section-logo/6.png',  srcHover: 'images/content/section-logo/6-hover.png',})
+            +slide({src: 'images/content/section-logo/7.png',  srcHover: 'images/content/section-logo/7-hover.png',})
+            +slide({src: 'images/content/section-logo/8.png',  srcHover: 'images/content/section-logo/8-hover.png',})
+            +slide({src: 'images/content/section-logo/9.png',  srcHover: 'images/content/section-logo/9-hover.png',})
+            +slide({src: 'images/content/section-logo/10.png', srcHover: 'images/content/section-logo/10-hover.png'})
+            +slide({src: 'images/content/section-logo/11.png', srcHover: 'images/content/section-logo/11-hover.png'})
+            +slide({src: 'images/content/section-logo/12.png', srcHover: 'images/content/section-logo/12-hover.png'})
+            +slide({src: 'images/content/section-logo/13.png', srcHover: 'images/content/section-logo/13-hover.png'})
+            +slide({src: 'images/content/section-logo/16.png', srcHover: 'images/content/section-logo/16-hover.png'})
+            +slide({src: 'images/content/section-logo/14.png', srcHover: 'images/content/section-logo/15-hover.png'})
+            +slide({src: 'images/content/section-logo/15.png', srcHover: 'images/content/section-logo/14-hover.png'})
+    .container
+        .section-logo__inner
+            h2.section-logo__title.section-logo__title--partners Наши партнеры
+    .section-logo__slider-partners(dir="rtl")
+        +slide2({src: 'images/content/section-logo/partners/0.png', srcHover: 'images/content/section-logo/partners/0-hover.png'})
+        +slide2({src: 'images/content/section-logo/partners/1.png', srcHover: 'images/content/section-logo/partners/1-hover.png'})
+        +slide2({src: 'images/content/section-logo/partners/2.png', srcHover: 'images/content/section-logo/partners/2-hover.png'})
+        +slide2({src: 'images/content/section-logo/partners/3.png', srcHover: 'images/content/section-logo/partners/3-hover.png'})
+        +slide2({src: 'images/content/section-logo/partners/4.png', srcHover: 'images/content/section-logo/partners/4-hover.png'})
+        +slide2({src: 'images/content/section-logo/partners/5.png', srcHover: 'images/content/section-logo/partners/5-hover.png'})
+        +slide2({src: 'images/content/section-logo/partners/6.png', srcHover: 'images/content/section-logo/partners/6-hover.png'})

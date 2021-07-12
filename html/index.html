@@ -71,7 +71,7 @@
       </svg>
     </div>
     <div class="layout">
-      <header class="header">
+      <header class="header" data-aos="fade-down">
         <div class="container">
           <div class="header__inner"><a class="logo" href="index.html">
               <svg class="icon">
@@ -102,24 +102,21 @@
               </div>
             </div>
             <div class="header__right">
-              <div class="langs-block">
-                <div class="langs-block__active"><span>RU</span>
-                  <svg class="icon">
-                    <use xlink:href="images/skipped-optim.svg#arrow-down"></use>
-                  </svg>
-                </div>
-                <div class="langs-block__list-wrapper lang-toggle">
-                  <ul class="langs-block__list">
-                    <li><a>RU</a></li>
-                    <li><a>EN</a></li>
-                  </ul>
-                </div>
-              </div>
+              <!--.langs-block-->
+              <!--	.langs-block__active(id='langs-block')-->
+              <!--		span RU-->
+              <!--		+setSvg({name: 'arrow-down'})-->
+              <!--	.langs-block__list-wrapper.lang-toggle-->
+              <!--		ul.langs-block__list-->
+              <!--			li-->
+              <!--				a RU-->
+              <!--			li-->
+              <!--				a EN-->
               <div class="call-block remove-mobile">
                 <!-- Заказать звонок-->
                 <!--__________-->
                 <div class="call-block__link-wrapper">
-                  <div class="call-block__link"><a class="link" href="#">Заказать звонок</a></div>
+                  <div class="call-block__link popup-open"><a class="link" href="#">Заказать звонок</a></div>
                 </div>
                 <!--__________-->
                 <!-- Номер телефона-->
@@ -138,49 +135,51 @@
       <!--header-->
       <main class="main">
         <section class="section-main" id="first-section" style="background-image:url(images/content/main-section/bg-pc.jpg)">
-          <div class="section-main__wrapper">
-            <div class="container">
-              <div class="section-main__inner">
-                <div class="section-main__data">
-                  <div class="main-block">
-                    <div class="main-block__content">
-                      <h1 class="main-block__title">Вы экспортер? Вы МСП?</h1>
-                      <p class="main-block__text">Оставьте заявку и получите бесплатные услуги от команды LILWID</p>
+          <div class="section-main__wrapper" id="first-wrapper">
+            <div class="section-main__inner-2">
+              <div class="container">
+                <div class="section-main__inner">
+                  <div class="section-main__data" data-aos="fade-up">
+                    <div class="main-block">
+                      <div class="main-block__content">
+                        <h1 class="main-block__title">Вы экспортер? Вы МСП?</h1>
+                        <p class="main-block__text">Оставьте заявку и получите бесплатные услуги от команды LILWID</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="section-main__form form-block">
-                  <form class="section-main__form-inner">
-                    <div class="form-block__header">
-                      <div class="section-main__form-title">
-                        <h6 class="form-title">Оставьте заявку</h6>
-                      </div>
-                      <div class="section-main__form-text">
-                        <p class="form-text">и получите <span class="text-active">бесплатные услуги</span> от команды <span class="text-medium">Likwid</span></p>
-                      </div>
-                    </div>
-                    <div class="form-block__body">
-                      <div class="form-block__row">
-                        <div class="form-block__col">
-                          <input class="input-text" type="text" name="name" placeholder="Как вас зовут?"/>
+                  <div class="section-main__form form-block" data-aos="fade-up">
+                    <form class="section-main__form-inner">
+                      <div class="form-block__header">
+                        <div class="section-main__form-title">
+                          <h6 class="form-title">Оставьте заявку</h6>
                         </div>
-                        <div class="form-block__col">
-                          <input class="input-text" type="text" name="email" placeholder="Ваш Email"/>
+                        <div class="section-main__form-text">
+                          <p class="form-text">и получите <span class="text-active">бесплатные услуги</span> от команды <span class="text-medium">Likwid</span></p>
                         </div>
                       </div>
-                      <div class="form-block__row">
-                        <textarea class="input-text" placeholder="Ваш комментарий.."></textarea>
+                      <div class="form-block__body">
+                        <div class="form-block__row">
+                          <div class="form-block__col">
+                            <input class="input-text" type="text" name="name" placeholder="Как вас зовут?"/>
+                          </div>
+                          <div class="form-block__col">
+                            <input class="input-text" type="text" name="email" placeholder="Ваш Email"/>
+                          </div>
+                        </div>
+                        <div class="form-block__row">
+                          <textarea class="input-text" placeholder="Ваш комментарий.."></textarea>
+                        </div>
                       </div>
-                    </div>
-                    <div class="form-block__footer">
-                      <div class="section-main__form-submit">
-                        <input class="input-submit" type="submit" value="Оставить заявку"/>
+                      <div class="form-block__footer">
+                        <div class="section-main__form-submit">
+                          <input class="input-submit" type="submit" value="Оставить заявку"/>
+                        </div>
+                        <div class="section-main__form-police">
+                          <p class="form-police">*Нажимая на кнопку "Оставить заявку", <br> вы соглашаетесь с <a href="police.html" class="text-link">политикой конфиденциальности</a></p>
+                        </div>
                       </div>
-                      <div class="section-main__form-police">
-                        <p class="form-police">*Нажимая на кнопку "Оставить заявку", <br> вы соглашаетесь с <a href="police.html" class="text-link">политикой конфиденциальности</a></p>
-                      </div>
-                    </div>
-                  </form>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
@@ -192,7 +191,7 @@
               <!--left-->
               <div class="services-list__wrapper section-getFree__items">
                 <ul class="services-list">
-                  <div class="services-list__item-wrapper"><a class="services-list__item" href="search_clients.html">
+                  <div class="services-list__item-wrapper" data-aos="fade-right"><a class="services-list__item" href="search_clients.html">
                       <div class="services-list__item-icon">
                         <svg class="icon">
                           <use xlink:href="images/skipped-optim.svg#services-clients"></use>
@@ -202,7 +201,7 @@
                         <div class="services-list__item-title">Поиск клиентов на международном рынке</div>
                         <p class="services-list__item-text">и получите бесплатные услуги от команды Likwid</p>
                       </div></a></div>
-                  <div class="services-list__item-wrapper"><a class="services-list__item" href="proto.html">
+                  <div class="services-list__item-wrapper" data-aos="fade-right"><a class="services-list__item" href="proto.html">
                       <div class="services-list__item-icon">
                         <svg class="icon">
                           <use xlink:href="images/skipped-optim.svg#services-create"></use>
@@ -212,7 +211,7 @@
                         <div class="services-list__item-title">Создание маркетинговых материалов</div>
                         <p class="services-list__item-text">и получите бесплатные услуги от команды Likwid</p>
                       </div></a></div>
-                  <div class="services-list__item-wrapper"><a class="services-list__item" href="free_site.html">
+                  <div class="services-list__item-wrapper" data-aos="fade-right"><a class="services-list__item" href="free_site.html">
                       <div class="services-list__item-icon">
                         <svg class="icon">
                           <use xlink:href="images/skipped-optim.svg#services-site"></use>
@@ -222,7 +221,7 @@
                         <div class="services-list__item-title">Создание сайта</div>
                         <p class="services-list__item-text">и получите бесплатные услуги от команды Likwid</p>
                       </div></a></div>
-                  <div class="services-list__item-wrapper"><a class="services-list__item" href="translate.html">
+                  <div class="services-list__item-wrapper" data-aos="fade-right"><a class="services-list__item" href="translate.html">
                       <div class="services-list__item-icon">
                         <svg class="icon">
                           <use xlink:href="images/skipped-optim.svg#services-translate"></use>
@@ -235,7 +234,7 @@
                 </ul>
               </div>
               <!--right-->
-              <div class="section-getFree__right">
+              <div class="section-getFree__right" data-aos="fade-left">
                 <h2 class="section-getFree__title">Что вы получите бесплатно?</h2><img class="section-getFree__img" src="images/content/section-getFree/0.jpg">
               </div>
             </div>
@@ -244,9 +243,9 @@
         <section class="section-whoWork">
           <div class="container">
             <div class="section-whoWork__inner">
-              <h2 class="section-whoWork__title">Как работает?</h2>
+              <h2 class="section-whoWork__title" data-aos="fade-up">Как работает?</h2>
               <div class="section-whoWork__data">
-                <div class="section-whoWork__step">
+                <div class="section-whoWork__step" data-aos="fade-up">
                   <div class="section-whoWork__step-inner">
                     <div class="section-whoWork__step-header"><img class="section-whoWork__step-img" src="images/content/section-whoWork/0.jpg"/>
                       <div class="section-whoWork__step-row">
@@ -260,7 +259,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="section-whoWork__step">
+                <div class="section-whoWork__step" data-aos="fade-up">
                   <div class="section-whoWork__step-inner">
                     <div class="section-whoWork__step-header"><img class="section-whoWork__step-img" src="images/content/section-whoWork/1.jpg"/>
                       <div class="section-whoWork__step-row">
@@ -274,7 +273,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="section-whoWork__step">
+                <div class="section-whoWork__step" data-aos="fade-up">
                   <div class="section-whoWork__step-inner">
                     <div class="section-whoWork__step-header"><img class="section-whoWork__step-img" src="images/content/section-whoWork/2.jpg"/>
                       <div class="section-whoWork__step-row">
@@ -288,7 +287,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="section-whoWork__step">
+                <div class="section-whoWork__step" data-aos="fade-up">
                   <div class="section-whoWork__step-inner">
                     <div class="section-whoWork__step-header"><img class="section-whoWork__step-img" src="images/content/section-whoWork/3.jpg"/>
                       <div class="section-whoWork__step-row">
@@ -306,10 +305,148 @@
             </div>
           </div>
         </section>
+        <section class="section-logo">
+          <div class="container">
+            <div class="section-logo__inner">
+              <h2 class="section-logo__title">Наши клиенты</h2>
+            </div>
+          </div>
+          <div class="section-logo__slider-client-wrapper">
+            <div class="section-logo__slider-clients">
+                      <div class="section-logo__slide-client">
+                        <div class="section-logo__slide-client-inner">
+                          <div class="section-logo__slide-client-icon"><img class="img-normal" src="images/content/section-logo/0.png"><img class="img-hover" src="images/content/section-logo/0-hover.png"></div>
+                        </div>
+                      </div>
+                      <div class="section-logo__slide-client">
+                        <div class="section-logo__slide-client-inner">
+                          <div class="section-logo__slide-client-icon"><img class="img-normal" src="images/content/section-logo/1.png"><img class="img-hover" src="images/content/section-logo/1-hover.png"></div>
+                        </div>
+                      </div>
+                      <div class="section-logo__slide-client">
+                        <div class="section-logo__slide-client-inner">
+                          <div class="section-logo__slide-client-icon"><img class="img-normal" src="images/content/section-logo/2.png"><img class="img-hover" src="images/content/section-logo/2-hover.png"></div>
+                        </div>
+                      </div>
+                      <div class="section-logo__slide-client">
+                        <div class="section-logo__slide-client-inner">
+                          <div class="section-logo__slide-client-icon"><img class="img-normal" src="images/content/section-logo/3.png"><img class="img-hover" src="images/content/section-logo/3-hover.png"></div>
+                        </div>
+                      </div>
+                      <div class="section-logo__slide-client">
+                        <div class="section-logo__slide-client-inner">
+                          <div class="section-logo__slide-client-icon"><img class="img-normal" src="images/content/section-logo/4.png"><img class="img-hover" src="images/content/section-logo/4-hover.png"></div>
+                        </div>
+                      </div>
+                      <div class="section-logo__slide-client">
+                        <div class="section-logo__slide-client-inner">
+                          <div class="section-logo__slide-client-icon"><img class="img-normal" src="images/content/section-logo/5.png"><img class="img-hover" src="images/content/section-logo/5-hover.png"></div>
+                        </div>
+                      </div>
+                      <div class="section-logo__slide-client">
+                        <div class="section-logo__slide-client-inner">
+                          <div class="section-logo__slide-client-icon"><img class="img-normal" src="images/content/section-logo/6.png"><img class="img-hover" src="images/content/section-logo/6-hover.png"></div>
+                        </div>
+                      </div>
+                      <div class="section-logo__slide-client">
+                        <div class="section-logo__slide-client-inner">
+                          <div class="section-logo__slide-client-icon"><img class="img-normal" src="images/content/section-logo/7.png"><img class="img-hover" src="images/content/section-logo/7-hover.png"></div>
+                        </div>
+                      </div>
+                      <div class="section-logo__slide-client">
+                        <div class="section-logo__slide-client-inner">
+                          <div class="section-logo__slide-client-icon"><img class="img-normal" src="images/content/section-logo/8.png"><img class="img-hover" src="images/content/section-logo/8-hover.png"></div>
+                        </div>
+                      </div>
+                      <div class="section-logo__slide-client">
+                        <div class="section-logo__slide-client-inner">
+                          <div class="section-logo__slide-client-icon"><img class="img-normal" src="images/content/section-logo/9.png"><img class="img-hover" src="images/content/section-logo/9-hover.png"></div>
+                        </div>
+                      </div>
+                      <div class="section-logo__slide-client">
+                        <div class="section-logo__slide-client-inner">
+                          <div class="section-logo__slide-client-icon"><img class="img-normal" src="images/content/section-logo/10.png"><img class="img-hover" src="images/content/section-logo/10-hover.png"></div>
+                        </div>
+                      </div>
+                      <div class="section-logo__slide-client">
+                        <div class="section-logo__slide-client-inner">
+                          <div class="section-logo__slide-client-icon"><img class="img-normal" src="images/content/section-logo/11.png"><img class="img-hover" src="images/content/section-logo/11-hover.png"></div>
+                        </div>
+                      </div>
+                      <div class="section-logo__slide-client">
+                        <div class="section-logo__slide-client-inner">
+                          <div class="section-logo__slide-client-icon"><img class="img-normal" src="images/content/section-logo/12.png"><img class="img-hover" src="images/content/section-logo/12-hover.png"></div>
+                        </div>
+                      </div>
+                      <div class="section-logo__slide-client">
+                        <div class="section-logo__slide-client-inner">
+                          <div class="section-logo__slide-client-icon"><img class="img-normal" src="images/content/section-logo/13.png"><img class="img-hover" src="images/content/section-logo/13-hover.png"></div>
+                        </div>
+                      </div>
+                      <div class="section-logo__slide-client">
+                        <div class="section-logo__slide-client-inner">
+                          <div class="section-logo__slide-client-icon"><img class="img-normal" src="images/content/section-logo/16.png"><img class="img-hover" src="images/content/section-logo/16-hover.png"></div>
+                        </div>
+                      </div>
+                      <div class="section-logo__slide-client">
+                        <div class="section-logo__slide-client-inner">
+                          <div class="section-logo__slide-client-icon"><img class="img-normal" src="images/content/section-logo/14.png"><img class="img-hover" src="images/content/section-logo/15-hover.png"></div>
+                        </div>
+                      </div>
+                      <div class="section-logo__slide-client">
+                        <div class="section-logo__slide-client-inner">
+                          <div class="section-logo__slide-client-icon"><img class="img-normal" src="images/content/section-logo/15.png"><img class="img-hover" src="images/content/section-logo/14-hover.png"></div>
+                        </div>
+                      </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="section-logo__inner">
+              <h2 class="section-logo__title section-logo__title--partners">Наши партнеры</h2>
+            </div>
+          </div>
+          <div class="section-logo__slider-partners" dir="rtl">
+                    <div class="section-logo__slide-partners">
+                      <div class="section-logo__slide-partners-inner">
+                        <div class="section-logo__slide-partners-icon"><img class="img-normal" src="images/content/section-logo/partners/0.png"><img class="img-hover" src="images/content/section-logo/partners/0-hover.png"></div>
+                      </div>
+                    </div>
+                    <div class="section-logo__slide-partners">
+                      <div class="section-logo__slide-partners-inner">
+                        <div class="section-logo__slide-partners-icon"><img class="img-normal" src="images/content/section-logo/partners/1.png"><img class="img-hover" src="images/content/section-logo/partners/1-hover.png"></div>
+                      </div>
+                    </div>
+                    <div class="section-logo__slide-partners">
+                      <div class="section-logo__slide-partners-inner">
+                        <div class="section-logo__slide-partners-icon"><img class="img-normal" src="images/content/section-logo/partners/2.png"><img class="img-hover" src="images/content/section-logo/partners/2-hover.png"></div>
+                      </div>
+                    </div>
+                    <div class="section-logo__slide-partners">
+                      <div class="section-logo__slide-partners-inner">
+                        <div class="section-logo__slide-partners-icon"><img class="img-normal" src="images/content/section-logo/partners/3.png"><img class="img-hover" src="images/content/section-logo/partners/3-hover.png"></div>
+                      </div>
+                    </div>
+                    <div class="section-logo__slide-partners">
+                      <div class="section-logo__slide-partners-inner">
+                        <div class="section-logo__slide-partners-icon"><img class="img-normal" src="images/content/section-logo/partners/4.png"><img class="img-hover" src="images/content/section-logo/partners/4-hover.png"></div>
+                      </div>
+                    </div>
+                    <div class="section-logo__slide-partners">
+                      <div class="section-logo__slide-partners-inner">
+                        <div class="section-logo__slide-partners-icon"><img class="img-normal" src="images/content/section-logo/partners/5.png"><img class="img-hover" src="images/content/section-logo/partners/5-hover.png"></div>
+                      </div>
+                    </div>
+                    <div class="section-logo__slide-partners">
+                      <div class="section-logo__slide-partners-inner">
+                        <div class="section-logo__slide-partners-icon"><img class="img-normal" src="images/content/section-logo/partners/6.png"><img class="img-hover" src="images/content/section-logo/partners/6-hover.png"></div>
+                      </div>
+                    </div>
+          </div>
+        </section>
         <section class="section-letter">
           <div class="section-letter__inner">
-            <h2 class="section-letter__title">Письма</h2>
-            <div class="section-letter__slider-wrapper">
+            <h2 class="section-letter__title" data-aos="fade-up">Письма</h2>
+            <div class="section-letter__slider-wrapper" data-aos="fade-up">
               <div class="slider-arrow">
                 <button class="slider-arrow__prev section-letter__slider-prev">
                   <svg class="icon">
@@ -333,46 +470,48 @@
             </div>
           </div>
         </section>
-        <section class="section-helpYou">
-          <div class="container">
-            <div class="section-helpYou__inner">
-              <h2 class="section-helpYou__title">Мы поможем вашему бизнесу</h2>
-              <form class="section-helpYou__form form-block form-submit">
-                <div class="form-block__header">
-                  <div class="section-helpYou__form-title">
-                    <h6 class="form-title">Оставьте заявку</h6>
-                  </div>
-                  <div class="section-helpYou__form-text">
-                    <p class="form-text">и получите <span class="text-active">бесплатные услуги</span> от команды <span class="text-medium">Likwid</span></p>
-                  </div>
-                </div>
-                <div class="form-block__body">
-                  <div class="form-block__row">
-                    <div class="form-block__col">
-                      <input class="input-text" type="text" name="name" placeholder="Как вас зовут?"/>
+        <section class="section-helpYou" id="help-you">
+          <div class="section-helpYou__wrapper">
+            <div class="container">
+              <div class="section-helpYou__inner">
+                <h2 class="section-helpYou__title" data-aos="fade-up">Мы поможем вашему бизнесу</h2>
+                <form class="section-helpYou__form form-block form-submit" data-aos="fade-down">
+                  <div class="form-block__header">
+                    <div class="section-helpYou__form-title">
+                      <h6 class="form-title">Оставьте заявку</h6>
                     </div>
-                    <div class="form-block__col">
-                      <input class="input-text" type="text" name="email" placeholder="Ваш Email"/>
+                    <div class="section-helpYou__form-text">
+                      <p class="form-text">и получите <span class="text-active">бесплатные услуги</span> от команды <span class="text-medium">Likwid</span></p>
                     </div>
                   </div>
-                  <div class="form-block__row">
-                    <textarea class="input-text" placeholder="Ваш комментарий.."></textarea>
+                  <div class="form-block__body">
+                    <div class="form-block__row">
+                      <div class="form-block__col">
+                        <input class="input-text" type="text" name="name" placeholder="Как вас зовут?"/>
+                      </div>
+                      <div class="form-block__col">
+                        <input class="input-text" type="text" name="email" placeholder="Ваш Email"/>
+                      </div>
+                    </div>
+                    <div class="form-block__row">
+                      <textarea class="input-text" placeholder="Ваш комментарий.."></textarea>
+                    </div>
                   </div>
-                </div>
-                <div class="section-helpYou__form-footer">
-                  <div class="section-helpYou__form-submit">
-                    <input class="input-submit" type="submit" value="Оставить заявку"/>
+                  <div class="section-helpYou__form-footer">
+                    <div class="section-helpYou__form-submit">
+                      <input class="input-submit" type="submit" value="Оставить заявку"/>
+                    </div>
+                    <div class="section-helpYou__form-police">
+                      <p class="form-police">*Нажимая на кнопку "Оставить заявку", вы соглашаетесь с <a href="police.html" class="text-link">политикой конфиденциальности</a></p>
+                    </div>
                   </div>
-                  <div class="section-helpYou__form-police">
-                    <p class="form-police">*Нажимая на кнопку "Оставить заявку", вы соглашаетесь с <a href="police.html" class="text-link">политикой конфиденциальности</a></p>
-                  </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
         </section>
-        <g class="popup">
-          <div class="popup__inner">
+        <div class="popup"> 
+          <div class="popup__inner" id="form-popup">
             <!--button close-->
             <button class="popup__close popup-close">
               <svg class="icon">
@@ -409,7 +548,7 @@
               </div>
             </form>
           </div>
-        </g>
+        </div>
       </main>
       <div class="footer">
         <div class="container">

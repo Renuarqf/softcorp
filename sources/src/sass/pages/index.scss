@@ -1,27 +1,14 @@
 .section-main {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: black;
-  background-image: url("../images/content/main-section/bg-pc.jpg");
-
-  @media screen and (max-width: $mobile-screen) {
-    background-image: url("../images/content/main-section/bg-mb.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: black;
-  }
-
   position: relative;
 
   width: 100%;
   height: auto;
 
   min-height: 72rem;
+  max-height: 75rem;
 
   @media screen and (max-width: $mobile-screen) {
-    min-height: 82rem;
+    min-height: 87rem;
   }
 
   &__inner {
@@ -38,6 +25,20 @@
   }
 
   &__wrapper {
+    min-height: 72rem;
+    max-height: 75rem;
+
+    .particles-js-canvas-el{
+      min-height: 72rem;
+      max-height: 75rem;
+
+      @media screen and (max-width: $mobile-screen) {
+        display: none;
+      }
+    }
+  }
+
+  &__inner-2{
     position: absolute;
     top: 50%;
     left: 0;
@@ -576,13 +577,24 @@
 //_________________________________
 
 .section-helpYou{
-  background: black url('../images/content/section-helpYou/bg.jpg') center no-repeat;
-  background-size: cover;
+  background-color: black;
 
-  padding: 9rem 0;
+  position: relative;
 
-  @media screen and (max-width: $table-screen) {
-    padding: 5rem 0;
+  height: 700px;
+
+  @media screen and (max-width: $mobile-screen) {
+    height: 650px;
+  }
+
+  &__wrapper{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 100;
+    visibility: hidden;
   }
 
   &__title {
@@ -596,6 +608,8 @@
     font-weight: 600;
 
     text-align: center;
+
+    visibility: visible;
 
     @media screen and (max-width: $table-screen) {
       font-size: 4rem;
@@ -613,6 +627,8 @@
     margin: 0 auto;
 
     text-align: center;
+
+    visibility: visible;
 
     @media screen and (max-width: $mobile-screen) {
       padding: 2rem;

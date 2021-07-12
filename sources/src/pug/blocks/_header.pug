@@ -1,4 +1,4 @@
-header.header
+header.header(data-aos="fade-down")
 	.container
 		.header__inner
 			a(href="index.html").logo
@@ -32,21 +32,21 @@ header.header
 								a(href='tel: +0634372457').tel (063) 437 24 57
 						//__________
 			.header__right
-				.langs-block
-					.langs-block__active
-						span RU
-						+setSvg({name: 'arrow-down'})
-					.langs-block__list-wrapper.lang-toggle
-						ul.langs-block__list
-							li
-								a RU
-							li
-								a EN
+				//.langs-block
+				//	.langs-block__active(id='langs-block')
+				//		span RU
+				//		+setSvg({name: 'arrow-down'})
+				//	.langs-block__list-wrapper.lang-toggle
+				//		ul.langs-block__list
+				//			li
+				//				a RU
+				//			li
+				//				a EN
 				.call-block.remove-mobile
 					// Заказать звонок
 					//__________
 					.call-block__link-wrapper
-						.call-block__link
+						.call-block__link.popup-open
 							a(href='#').link Заказать звонок
 					//__________
 					// Номер телефона

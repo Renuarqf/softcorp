@@ -7,9 +7,9 @@ block page
             .section-best-clients__inner
                 //OFFER
                 .section-best-clients__offer
-                    .section-best-clients__best-offer SALES, MARKETING, & CONTENT.
-                    h1.section-best-clients__title Лучшие клиенты у нас
-                    .section-best-clients__labels
+                    .section-best-clients__best-offer(data-aos="fade-up" data-aos-delay="500" data-aos-anchor="#best-clients-title" id='best-clients-offer') SALES, MARKETING, & CONTENT.
+                    h1.section-best-clients__title(data-aos="fade-down" id='best-clients-title') Лучшие клиенты у нас
+                    .section-best-clients__labels(data-aos="fade-down" data-aos-delay="800" data-aos-anchor="#best-clients-offer")
                         .section-best-clients__labels-row
                             .section-best-clients__labels-col
                                 .section-best-clients__labels-text We create global demand
@@ -36,10 +36,10 @@ block page
     section.section-services
         .container
             .section-services__inner
-                h2.section-services__title Наши услуги
+                h2.section-services__title(data-aos="fade-up") Наши услуги
                 .section-services__data
                     // 1 SERVICES BLOCK _____________
-                    .services-block.services-block_lidogen
+                    .services-block.services-block_lidogen(data-aos="fade-up")
                         .services-block__inner
                             h3.services-block__title Лидогенерация
                             h4.services-block__subtitle Мы найдем вам новых клиентов
@@ -50,7 +50,7 @@ block page
                                 .services-block__btn-more
                                     button.btn-simple.btn-simple--black Подробнее
                     // 2 SERVICES BLOCK _____________
-                    .services-block.services-block_site
+                    .services-block.services-block_site(data-aos="fade-up")
                         .services-block__inner
                             h3.services-block__title Сайты
                             h4.services-block__subtitle Мы найдем вам новых клиентов
@@ -61,7 +61,7 @@ block page
                                 .services-block__btn-more
                                     button.btn-simple.btn-simple--black Подробнее
                     // 3 SERVICES BLOCK _____________
-                    .services-block.services-block_translate
+                    .services-block.services-block_translate(data-aos="fade-up")
                         .services-block__inner
                             h3.services-block__title Переводы
                             h4.services-block__subtitle Мы найдем вам новых клиентов
@@ -73,7 +73,7 @@ block page
                                     button.btn-simple.btn-simple--black Подробнее
     .request-block
         .container
-            .request-block__inner
+            .request-block__inner(data-aos="zoom-in")
                 .request-block__data
                     .request-block__title Оставьте заявку и мы вам все расскажем
                     .request-block__text Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
@@ -82,6 +82,7 @@ block page
                 .request-block__right
                     img(src='images/content/block-request/0.jpg').request-block__img
     include sections/popup
+    include sections/section-logo
 mixin bestSlide()
     .section-best-clients__slide
         a(href='index.html').section-best-clients__slide-inner

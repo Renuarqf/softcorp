@@ -41,7 +41,7 @@ mixin formPolice(object)
 
 
 mixin servicesItems(object)
-    .services-list__item-wrapper
+    .services-list__item-wrapper(data-aos="fade-right")
         a(href=object.link).services-list__item
             .services-list__item-icon
                 +setSvg({name: object.icon})
@@ -51,7 +51,7 @@ mixin servicesItems(object)
 
 
 mixin whoWorkStep(object)
-    .section-whoWork__step
+    .section-whoWork__step(data-aos="fade-up")
         .section-whoWork__step-inner
             .section-whoWork__step-header
                 img(src=object.img).section-whoWork__step-img
@@ -92,7 +92,7 @@ mixin reviewsSlide(object)
                 .section-reviews__slide-text !{object.text}
 
 mixin technologistItem(object)
-    li.section-technologist__item
+    li.section-technologist__item(data-aos='fade-down' data-aos-delay='500')
         .section-technologist__item-inner
             .section-technologist__item-icon
                 img(src=object.src).icon
@@ -101,5 +101,5 @@ mixin technologistItem(object)
 
 mixin portfolioSiteSlide(object)
     .section-site-portfolio__slide
-        a(href=object.link).section-site-portfolio__slide-inner
+        a(href=object.bigsrc data-fancybox='siteGallery' data-caption="My caption 2" data-type="image").section-site-portfolio__slide-inner
             img(src=object.src).section-site-portfolio__slide-img
