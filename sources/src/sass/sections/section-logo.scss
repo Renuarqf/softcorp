@@ -28,8 +28,7 @@
   }
 
   &__slide-partners{
-    padding: 0 2rem;
-
+    padding: 0 1rem;
     @media screen and (max-width: $table-screen) {
       padding: 0 1rem;
     }
@@ -56,12 +55,12 @@
     }
 
     .img-normal{
-      height: 7.8rem;
+      height: 5.8rem;
       width: auto;
 
-      display: block;
-
       @include margin(auto);
+
+      display: block;
 
       opacity: 1;
       transition: all 0.2s linear;
@@ -71,7 +70,7 @@
     }
 
     .img-hover{
-      height: 7.8rem;
+      height: 5.8rem;
       width: auto;
 
       @include margin(auto);
@@ -86,8 +85,6 @@
       top: 0;
       left: 0;
       right: 0;
-
-      display: block;
     }
   }
 
@@ -122,7 +119,6 @@
     .img-normal{
       height: 5.8rem;
       width: auto;
-      max-width: 100%;
 
       @include margin(auto);
 
@@ -138,9 +134,10 @@
     .img-hover{
       height: 5.8rem;
       width: auto;
-      max-width: 100%;
 
       @include margin(auto);
+
+      display: block;
 
       opacity: 0;
       transition: all 0.2s linear;
@@ -150,19 +147,19 @@
       top: 0;
       left: 0;
       right: 0;
-
-      display: block;
     }
   }
 
   .slick-track{
     display: flex;
     align-items: stretch;
+
+    width: max-content;
+    max-width: max-content;
   }
 
   .slick-slide{
-    @media screen and (max-width: $desctop-xs) {
-
-    }
+    max-width: max-content;
+    width: 100% !important;
   }
 }

@@ -268,7 +268,11 @@
   }
 
   .call-block__link-wrapper{
-    margin-left: 0;
-    margin-right: auto;
+
+    @media screen and (max-width: $mobile-screen) {
+      margin-right: auto;
+      margin-left: 0;
+
+    }
   }
 }

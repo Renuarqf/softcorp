@@ -138,15 +138,29 @@ $(function () {
         }
     });
 
+    setNavigation();
+
+    function setNavigation() {
+        var path = window.location.pathname;
+        path = path.replace(/\/$/, "");
+        path = decodeURIComponent(path);
+
+        $(".menu a").each(function () {
+            var href = $(this).attr('href');
+            if (path.indexOf(href) !== -1) {
+                $(this).addClass('active');
+            }
+        });
+    }
+
     $('.section-logo__slider-partners').slick({
-        slidesToScroll: 4,
+        slidesToScroll: 1,
         slidesToShow: 6,
-        centerPadding: "10rem",
         centerMode: true,
         infinite: true,
         autoplay: true,
         autoplaySpeed: 0,
-        speed: 8000,
+        speed: 9000,
         cssEase: "linear",
         draggable: false,
         arrows: false,
@@ -158,7 +172,7 @@ $(function () {
                 breakpoint: 1025,
                 settings: {
                     slidesToScroll: 1,
-                    slidesToShow: 4,
+                    slidesToShow: 1,
                 }
             },
             {
@@ -172,12 +186,11 @@ $(function () {
         ]
     })
     $('.section-logo__slider-clients').slick({
-        slidesToScroll: 4,
+        slidesToScroll: 1,
         slidesToShow: 6,
-        centerPadding: "10rem",
         autoplay: true,
         autoplaySpeed: 0,
-        speed: 8000,
+        speed: 9000,
         cssEase: "linear",
         draggable: false,
         centerMode: true,
@@ -189,19 +202,21 @@ $(function () {
                 breakpoint: 1025,
                 settings: {
                     slidesToScroll: 1,
-                    slidesToShow: 3,
+                    slidesToShow: 1,
                 }
             },
             {
                 breakpoint: 769,
                 settings: {
-                    slidesToScroll: 3,
-                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    slidesToShow: 1,
                     centerMode: false,
                 }
             }
         ]
     })
+
+    $('.section-logo__slider-partners').slick('setPosition')
 
     if ($('#help-you')[0]) {
         particlesJS('help-you', {
